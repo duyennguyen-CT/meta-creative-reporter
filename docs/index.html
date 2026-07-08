@@ -73,7 +73,8 @@
   <div class="tabs" id="tabs"></div>
   <div class="controls">
     <span class="ctl-label">View:</span>
-    <button class="ctl" id="btn-grouped">Group by creative</button>
+    <button class="ctl" id="btn-creative">By creative</button>
+    <button class="ctl" id="btn-format">By format</button>
     <button class="ctl" id="btn-perad">Per ad</button>
   </div>
   <div id="panel"></div>
@@ -85,7 +86,7 @@
 const CUR = "SGD";
 const SGD_TO_VND = 20337;  // exchange rate used for the VND columns
 let RAW = null, RANGES = {}, curRange = null;
-let DATA = null, activeIdx = 0, sortKey = "spend", sortDir = -1, grouped = true;
+let DATA = null, activeIdx = 0, sortKey = "spend", sortDir = -1, viewMode = "creative";
 
 const fmtInt = n => n.toLocaleString("en-US");
 const fmtMoney = n => CUR + " " + n.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -106,35 +107,47 @@ function accountTotals(acc) {
   return t;
 }
 
-// Merge ads that share the same creative name into one row (sums + recomputed rates).
-function aggregateByName(creatives) {
-  const map = new Map();
-  creatives.forEach(c => {
-    const g = map.get(c.name) || {name: c.name, ads: 0, spend: 0, impressions: 0, reach: 0, clicks: 0, installs: 0};
-    g.ads++; g.spend += c.spend; g.impressions += c.impressions; g.reach += c.reach;
-    g.clicks += c.clicks; g.installs += (c.installs || 0);
-    map.set(c.name, g);
-  });
-  return [...map.values()].map(g => {
-    const cpi = g.installs ? g.spend / g.installs : 0;
-    return {
-      ...g,
-      ctr: g.impressions ? g.clicks / g.impressions * 100 : 0,
-      cpc: g.clicks ? g.spend / g.clicks : 0,
-      cpm: g.impressions ? g.spend / g.impressions * 1000 : 0,
-      frequency: g.reach ? g.impressions / g.reach : 0,
-      cpi,
-      spend_vnd: g.spend * SGD_TO_VND,
-      cpi_vnd: cpi * SGD_TO_VND,
-    };
-  });
+// Recompute rate/derived metrics from a summed bucket.
+function withRates(g) {
+  const cpi = g.installs ? g.spend / g.installs : 0;
+  const formats = g._formats ? [...g._formats] : [];
+  const out = {
+    ...g,
+    ctr: g.impressions ? g.clicks / g.impressions * 100 : 0,
+    cpc: g.clicks ? g.spend / g.clicks : 0,
+    cpm: g.impressions ? g.spend / g.impressions * 1000 : 0,
+    frequency: g.reach ? g.impressions / g.reach : 0,
+    cpi,
+    spend_vnd: g.spend * SGD_TO_VND,
+    cpi_vnd: cpi * SGD_TO_VND,
+    format: formats.length === 1 ? formats[0] : (formats.length > 1 ? "Mixed" : (g.format || "Other")),
+  };
+  delete out._formats;
+  return out;
 }
 
-// Per-ad row: guarantee installs/cpi exist even for older data files.
+// Merge rows that share the same key into one bucket (sums + recomputed rates).
+function aggregateBy(creatives, keyFn) {
+  const map = new Map();
+  creatives.forEach(c => {
+    const key = keyFn(c);
+    const g = map.get(key) || {name: key, ads: 0, spend: 0, impressions: 0, reach: 0, clicks: 0, installs: 0, _formats: new Set()};
+    g.ads++; g.spend += c.spend; g.impressions += c.impressions; g.reach += c.reach;
+    g.clicks += c.clicks; g.installs += (c.installs || 0);
+    g._formats.add(c.format || "Other");
+    map.set(key, g);
+  });
+  return [...map.values()].map(withRates);
+}
+
+const aggregateByName = creatives => aggregateBy(creatives, c => c.name);
+const aggregateByFormat = creatives => aggregateBy(creatives, c => c.format || "Other");
+
+// Per-ad row: guarantee installs/cpi/format exist even for older data files.
 function normalize(c) {
   const installs = c.installs || 0;
   const cpi = c.cpi != null ? c.cpi : (installs ? c.spend / installs : 0);
-  return {...c, ads: 1, installs, cpi, spend_vnd: c.spend * SGD_TO_VND, cpi_vnd: cpi * SGD_TO_VND};
+  return {...c, ads: 1, installs, cpi, format: c.format || "Other", spend_vnd: c.spend * SGD_TO_VND, cpi_vnd: cpi * SGD_TO_VND};
 }
 
 function renderCards() {
@@ -164,10 +177,11 @@ function renderTabs() {
 
 function selectTab(i) { activeIdx = i; sortKey = "spend"; sortDir = -1; renderTabs(); renderPanel(); }
 function sortBy(k) { if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = -1; } renderPanel(); }
-function setView(g) { grouped = g; sortKey = "spend"; sortDir = -1; renderControls(); renderPanel(); }
+function setView(m) { viewMode = m; sortKey = "spend"; sortDir = -1; renderControls(); renderPanel(); }
 
 const COLS = [
   {k: "name", label: "Creative"},
+  {k: "format", label: "Format"},
   {k: "spend", label: "Spend", f: fmtMoney},
   {k: "spend_vnd", label: "Spend (₫)", f: fmtVnd},
   {k: "impressions", label: "Impr.", f: fmtInt},
@@ -183,30 +197,38 @@ const COLS = [
 ];
 
 function renderControls() {
-  document.getElementById("btn-grouped").className = "ctl" + (grouped ? " active" : "");
-  document.getElementById("btn-perad").className = "ctl" + (grouped ? "" : " active");
+  document.getElementById("btn-creative").className = "ctl" + (viewMode === "creative" ? " active" : "");
+  document.getElementById("btn-format").className = "ctl" + (viewMode === "format" ? " active" : "");
+  document.getElementById("btn-perad").className = "ctl" + (viewMode === "ad" ? " active" : "");
 }
 
 function renderPanel() {
   const acc = DATA.accounts[activeIdx];
   const t = accountTotals(acc);
-  const rows = (grouped ? aggregateByName(acc.creatives) : acc.creatives.map(normalize))
-    .sort((a, b) => {
+  const byFormat = viewMode === "format";
+  const rowsRaw = viewMode === "creative" ? aggregateByName(acc.creatives)
+    : byFormat ? aggregateByFormat(acc.creatives)
+    : acc.creatives.map(normalize);
+  const rows = rowsRaw.sort((a, b) => {
       const x = a[sortKey], y = b[sortKey];
       if (typeof x === "string") return sortDir * x.localeCompare(y);
       return sortDir * (x - y);
     });
-  const head = COLS.map(c =>
+  // In the format view, the first column IS the format, so drop the separate one.
+  const cols = byFormat
+    ? [{k: "name", label: "Format"}, ...COLS.filter(c => c.k !== "name" && c.k !== "format")]
+    : COLS;
+  const head = cols.map(c =>
     `<th class="${c.k === sortKey ? "sorted" : ""}" onclick="sortBy('${c.k}')">${c.label}</th>`
   ).join("");
-  const body = rows.map(r => "<tr>" + COLS.map(c => {
+  const body = rows.map(r => "<tr>" + cols.map(c => {
     if (c.k === "name") {
-      const tag = (grouped && r.ads > 1) ? `<span class="pill">×${r.ads} ads</span>` : "";
+      const tag = (viewMode !== "ad" && r.ads > 1) ? `<span class="pill">×${r.ads} ads</span>` : "";
       return `<td class="name" title="${r.name}">${r.name}${tag}</td>`;
     }
     return `<td>${c.f ? c.f(r[c.k]) : r[c.k]}</td>`;
   }).join("") + "</tr>").join("");
-  const unit = grouped ? "creatives" : "ads";
+  const unit = viewMode === "creative" ? "creatives" : byFormat ? "formats" : "ads";
   document.getElementById("panel").innerHTML = `
     <div class="panel">
       <div class="panel-head">
@@ -245,8 +267,9 @@ fetch("./data/latest.json?v=" + Date.now())
 
     document.getElementById("generated").textContent = "Updated: " + (d.generated_at || "").replace("T", " ").replace("Z", " UTC");
     document.getElementById("foot").textContent = "Freq badge:  <3× (ok) · 3–7× (watch) · ≥7× (high)  ·  Group by creative: reach is summed (estimate)  ·  VND @ 1 SGD = " + SGD_TO_VND.toLocaleString("en-US") + "  —  data from Meta Marketing API";
-    document.getElementById("btn-grouped").onclick = () => setView(true);
-    document.getElementById("btn-perad").onclick = () => setView(false);
+    document.getElementById("btn-creative").onclick = () => setView("creative");
+    document.getElementById("btn-format").onclick = () => setView("format");
+    document.getElementById("btn-perad").onclick = () => setView("ad");
     applyRange(curRange);
   })
   .catch(e => { document.getElementById("panel").innerHTML = `<div class="err">Failed to load data/latest.json<br>${e}</div>`; });

@@ -126,6 +126,40 @@ def fetch_creatives(account_id, date_preset):
     return rows
 
 
+def classify_format(creative):
+    """Map a creative object to a coarse format bucket used by the dashboard."""
+    if not creative:
+        return "Other"
+    if creative.get("video_id") or creative.get("object_type") == "VIDEO":
+        return "Video"
+    if creative.get("child_attachments"):
+        return "Carousel"
+    if creative.get("image_hash") or creative.get("object_type") == "PHOTO":
+        return "Image"
+    # object_story_spec-based dynamic/catalog ads report as SHARE with no asset
+    if creative.get("object_type") == "SHARE":
+        return "Dynamic"
+    return creative.get("object_type") or "Other"
+
+
+def fetch_formats(ad_ids):
+    """Return {ad_id: format} by batch-reading each ad's creative object."""
+    out = {}
+    ids = list(ad_ids)
+    for i in range(0, len(ids), 50):
+        batch = ids[i:i + 50]
+        params = {
+            "ids": ",".join(batch),
+            "fields": "creative{object_type,video_id,image_hash,child_attachments}",
+            "access_token": TOKEN,
+        }
+        data = _get(META_GRAPH_URL, params)
+        for ad_id, node in (data or {}).items():
+            if isinstance(node, dict):
+                out[ad_id] = classify_format(node.get("creative") or {})
+    return out
+
+
 def period_label(preset):
     """Human date range that approximates Meta's definition of the preset."""
     t = datetime.date.today()
@@ -148,12 +182,16 @@ def period_label(preset):
 
 def build_from_api():
     ranges = {}
+    ad_ids = set()
     for preset, label in PRESETS:
         accounts = []
         for acc_label, acc_id in ACCOUNTS.items():
             print(f"Pulling [{preset}] {acc_label} ({acc_id}) ...")
             creatives = fetch_creatives(acc_id, preset)
             print(f"  -> {len(creatives)} creatives")
+            for c in creatives:
+                if c["id"]:
+                    ad_ids.add(c["id"])
             accounts.append({
                 "id": acc_id,
                 "label": acc_label,
@@ -165,6 +203,14 @@ def build_from_api():
             "period_label": period_label(preset),
             "accounts": accounts,
         }
+
+    # Creative format is an attribute of the ad, not of a time range — fetch once.
+    print(f"Resolving creative formats for {len(ad_ids)} ads ...")
+    fmt_map = fetch_formats(ad_ids)
+    for rng in ranges.values():
+        for acc in rng["accounts"]:
+            for c in acc["creatives"]:
+                c["format"] = fmt_map.get(c["id"], "Other")
 
     return {
         "generated_at": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chotot Meta Ads — Creative Performance</title>
+<style>
+  :root {
+    --bg: #f4f5f7; --card: #fff; --line: #e6e8eb; --ink: #1a1a2e;
+    --muted: #6b7280; --accent: #6d28d9; --green: #059669; --amber: #d97706; --red: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 20px 60px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  h1 { font-size: 20px; margin: 0; }
+  .sub { color: var(--muted); font-size: 13px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin: 22px 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .card .k { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+  .card .v { font-size: 24px; font-weight: 700; margin-top: 6px; }
+  .card .v.accent { color: var(--accent); }
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 14px; }
+  .tab {
+    border: 1px solid var(--line); background: var(--card); border-radius: 999px;
+    padding: 7px 14px; cursor: pointer; font-size: 13px; color: var(--muted);
+  }
+  .tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .tab .g { font-size: 10px; opacity: .7; margin-left: 6px; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .panel-head { padding: 14px 18px; border-bottom: 1px solid var(--line); display: flex; gap: 18px; flex-wrap: wrap; align-items: baseline; }
+  .panel-head b { font-size: 15px; }
+  .panel-head span { color: var(--muted); font-size: 12px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 10px 14px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: .03em; color: var(--muted); cursor: pointer; user-select: none; }
+  th.sorted::after { content: " ▾"; color: var(--accent); }
+  tbody tr:hover { background: #faf9ff; }
+  td.name { font-weight: 600; max-width: 240px; overflow: hidden; text-overflow: ellipsis; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .f-green { background: #dcfce7; color: var(--green); }
+  .f-amber { background: #fef3c7; color: var(--amber); }
+  .f-red { background: #fee2e2; color: var(--red); }
+  .foot { color: var(--muted); font-size: 12px; margin-top: 22px; text-align: center; }
+  .err { padding: 40px; text-align: center; color: var(--red); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>📊 Chotot Meta Ads — Creative Performance</h1>
+      <div class="sub" id="period">…</div>
+    </div>
+    <div class="sub" id="generated">…</div>
+  </header>
+
+  <div class="cards" id="cards"></div>
+  <div class="tabs" id="tabs"></div>
+  <div id="panel"></div>
+
+  <div class="foot" id="foot"></div>
+</div>
+
+<script>
+const CUR = "SGD";
+let DATA = null, activeIdx = 0, sortKey = "spend", sortDir = -1;
+
+const fmtInt = n => n.toLocaleString("en-US");
+const fmtMoney = n => CUR + " " + n.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+const fmtPct = n => n.toFixed(2) + "%";
+
+function freqBadge(f) {
+  const cls = f >= 7 ? "f-red" : (f >= 3 ? "f-amber" : "f-green");
+  return `<span class="badge ${cls}">${f.toFixed(2)}×</span>`;
+}
+
+function accountTotals(acc) {
+  const t = {spend: 0, impressions: 0, reach: 0, clicks: 0};
+  acc.creatives.forEach(c => { t.spend += c.spend; t.impressions += c.impressions; t.reach += c.reach; t.clicks += c.clicks; });
+  t.ctr = t.impressions ? t.clicks / t.impressions * 100 : 0;
+  t.count = acc.creatives.length;
+  return t;
+}
+
+function renderCards() {
+  const g = {spend: 0, impressions: 0, clicks: 0, count: 0};
+  DATA.accounts.forEach(a => { const t = accountTotals(a); g.spend += t.spend; g.impressions += t.impressions; g.clicks += t.clicks; g.count += t.count; });
+  const avgCtr = g.impressions ? g.clicks / g.impressions * 100 : 0;
+  const cards = [
+    {k: "Total Spend", v: fmtMoney(g.spend), accent: true},
+    {k: "Impressions", v: fmtInt(g.impressions)},
+    {k: "Clicks", v: fmtInt(g.clicks)},
+    {k: "Avg CTR", v: fmtPct(avgCtr)},
+    {k: "Creatives", v: fmtInt(g.count) + " · " + DATA.accounts.length + " acc"},
+  ];
+  document.getElementById("cards").innerHTML = cards.map(c =>
+    `<div class="card"><div class="k">${c.k}</div><div class="v ${c.accent ? "accent" : ""}">${c.v}</div></div>`
+  ).join("");
+}
+
+function renderTabs() {
+  document.getElementById("tabs").innerHTML = DATA.accounts.map((a, i) =>
+    `<div class="tab ${i === activeIdx ? "active" : ""}" onclick="selectTab(${i})">${a.label}<span class="g">${a.group || ""}</span></div>`
+  ).join("");
+}
+
+function selectTab(i) { activeIdx = i; sortKey = "spend"; sortDir = -1; renderTabs(); renderPanel(); }
+function sortBy(k) { if (sortKey === k) sortDir *= -1; else { sortKey = k; sortDir = -1; } renderPanel(); }
+
+const COLS = [
+  {k: "name", label: "Creative"},
+  {k: "spend", label: "Spend", f: fmtMoney},
+  {k: "impressions", label: "Impr.", f: fmtInt},
+  {k: "reach", label: "Reach", f: fmtInt},
+  {k: "clicks", label: "Clicks", f: fmtInt},
+  {k: "ctr", label: "CTR", f: fmtPct},
+  {k: "cpc", label: "CPC", f: fmtMoney},
+  {k: "cpm", label: "CPM", f: fmtMoney},
+  {k: "frequency", label: "Freq", f: freqBadge},
+];
+
+function renderPanel() {
+  const acc = DATA.accounts[activeIdx];
+  const t = accountTotals(acc);
+  const rows = [...acc.creatives].sort((a, b) => {
+    const x = a[sortKey], y = b[sortKey];
+    if (typeof x === "string") return sortDir * x.localeCompare(y);
+    return sortDir * (x - y);
+  });
+  const head = COLS.map(c =>
+    `<th class="${c.k === sortKey ? "sorted" : ""}" onclick="sortBy('${c.k}')">${c.label}</th>`
+  ).join("");
+  const body = rows.map(r => "<tr>" + COLS.map(c => {
+    const val = c.f ? c.f(r[c.k]) : r[c.k];
+    return `<td class="${c.k === "name" ? "name" : ""}" title="${c.k === "name" ? r.name : ""}">${val}</td>`;
+  }).join("") + "</tr>").join("");
+  document.getElementById("panel").innerHTML = `
+    <div class="panel">
+      <div class="panel-head">
+        <b>${acc.label}</b>
+        <span>Spend ${fmtMoney(t.spend)}</span>
+        <span>Impr ${fmtInt(t.impressions)}</span>
+        <span>Clicks ${fmtInt(t.clicks)}</span>
+        <span>CTR ${fmtPct(t.ctr)}</span>
+        <span>${t.count} creatives</span>
+      </div>
+      <div style="overflow-x:auto"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>
+    </div>`;
+}
+
+fetch("./data/latest.json?v=" + Date.now())
+  .then(r => r.json())
+  .then(d => {
+    DATA = d;
+    document.getElementById("period").textContent = d.period_label || "";
+    document.getElementById("generated").textContent = "Cập nhật: " + (d.generated_at || "").replace("T", " ").replace("Z", " UTC");
+    document.getElementById("foot").textContent = "Freq badge:  <3× (ok) · 3–7× (theo dõi) · ≥7× (cao)  —  data từ Meta Marketing API";
+    renderCards(); renderTabs(); renderPanel();
+  })
+  .catch(e => { document.getElementById("panel").innerHTML = `<div class="err">Không load được data/latest.json<br>${e}</div>`; });
+</script>
+</body>
+</html>

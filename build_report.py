@@ -142,7 +142,8 @@ def classify_format(creative):
     # object_story_spec/asset_feed-based dynamic/catalog ads report as SHARE, no asset
     if creative.get("object_type") == "SHARE":
         return "Dynamic"
-    return creative.get("object_type") or "Other"
+    # STATUS and other rare object types → keep the buckets clean
+    return "Other"
 
 
 def fetch_formats(ad_ids):

@@ -42,8 +42,11 @@ GROUPS = {
 }
 
 DATE_PRESET = "last_30d"
-FIELDS = "ad_id,ad_name,spend,impressions,reach,clicks,ctr,cpc,cpm,frequency"
+FIELDS = "ad_id,ad_name,spend,impressions,reach,clicks,ctr,cpc,cpm,frequency,actions"
 TOP_N = 25  # creatives per account, sorted by spend
+
+# action_type values counted as an app install (varies by campaign setup)
+INSTALL_ACTIONS = ("mobile_app_install", "omni_app_install", "app_install")
 
 TOKEN = os.environ.get("META_ACCESS_TOKEN", "")
 OUT_PATH = pathlib.Path(__file__).parent / "docs" / "data" / "latest.json"
@@ -90,11 +93,17 @@ def fetch_creatives(account_id):
     for row in data.get("data", []):
         reach = int(float(row.get("reach", 0) or 0))
         impr = int(float(row.get("impressions", 0) or 0))
+        spend = round(float(row.get("spend", 0) or 0), 2)
         freq = float(row.get("frequency") or (impr / reach if reach else 0))
+        installs = sum(
+            int(float(a.get("value", 0) or 0))
+            for a in (row.get("actions") or [])
+            if a.get("action_type") in INSTALL_ACTIONS
+        )
         rows.append({
             "id":          row.get("ad_id", ""),
             "name":        row.get("ad_name", ""),
-            "spend":       round(float(row.get("spend", 0) or 0), 2),
+            "spend":       spend,
             "impressions": impr,
             "reach":       reach,
             "clicks":      int(float(row.get("clicks", 0) or 0)),
@@ -102,6 +111,8 @@ def fetch_creatives(account_id):
             "cpc":         round(float(row.get("cpc", 0) or 0), 2),
             "cpm":         round(float(row.get("cpm", 0) or 0), 2),
             "frequency":   round(freq, 2),
+            "installs":    installs,
+            "cpi":         round(spend / installs, 2) if installs else 0,
         })
     return rows
 

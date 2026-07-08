@@ -59,6 +59,10 @@
   .f-green { background: #dcfce7; color: var(--green); }
   .f-amber { background: #fef3c7; color: var(--amber); }
   .f-red { background: #fee2e2; color: var(--red); }
+  .delta { font-size: 10px; font-weight: 700; margin-left: 5px; white-space: nowrap; }
+  .d-good { color: var(--green); }
+  .d-bad { color: var(--red); }
+  .d-flat { color: var(--muted); }
   .foot { color: var(--muted); font-size: 12px; margin-top: 22px; text-align: center; }
   .err { padding: 40px; text-align: center; color: var(--red); }
 </style>
@@ -115,20 +119,33 @@ function accountTotals(acc) {
   return t;
 }
 
+// % change of current vs previous period for CTR and CPI (null = no prior data).
+function deltas(ctr, cpi, pImpr, pClicks, pSpend, pInst) {
+  const pCtr = pImpr ? pClicks / pImpr * 100 : 0;
+  const pCpi = pInst ? pSpend / pInst : 0;
+  return {
+    ctr_d: pCtr ? (ctr - pCtr) / pCtr * 100 : null,
+    cpi_d: pCpi ? (cpi - pCpi) / pCpi * 100 : null,
+  };
+}
+
 // Recompute rate/derived metrics from a summed bucket.
 function withRates(g) {
   const cpi = g.installs ? g.spend / g.installs : 0;
+  const ctr = g.impressions ? g.clicks / g.impressions * 100 : 0;
   const formats = g._formats ? [...g._formats] : [];
   const out = {
     ...g,
-    ctr: g.impressions ? g.clicks / g.impressions * 100 : 0,
+    ctr,
     cpc: g.clicks ? g.spend / g.clicks : 0,
     cpm: g.impressions ? g.spend / g.impressions * 1000 : 0,
     frequency: g.reach ? g.impressions / g.reach : 0,
     cpi,
+    eng_rate: g.impressions ? g.engagement / g.impressions * 100 : 0,
     spend_vnd: g.spend * SGD_TO_VND,
     cpi_vnd: cpi * SGD_TO_VND,
     format: formats.length === 1 ? formats[0] : (formats.length > 1 ? "Mixed" : (g.format || "Other")),
+    ...deltas(ctr, cpi, g.prev_impressions, g.prev_clicks, g.prev_spend, g.prev_installs),
   };
   delete out._formats;
   return out;
@@ -139,9 +156,12 @@ function aggregateBy(creatives, keyFn) {
   const map = new Map();
   creatives.forEach(c => {
     const key = keyFn(c);
-    const g = map.get(key) || {name: key, ads: 0, spend: 0, impressions: 0, reach: 0, clicks: 0, installs: 0, _formats: new Set()};
+    const g = map.get(key) || {name: key, ads: 0, spend: 0, impressions: 0, reach: 0, clicks: 0,
+      installs: 0, engagement: 0, prev_spend: 0, prev_impressions: 0, prev_clicks: 0, prev_installs: 0, _formats: new Set()};
     g.ads++; g.spend += c.spend; g.impressions += c.impressions; g.reach += c.reach;
-    g.clicks += c.clicks; g.installs += (c.installs || 0);
+    g.clicks += c.clicks; g.installs += (c.installs || 0); g.engagement += (c.engagement || 0);
+    g.prev_spend += (c.prev_spend || 0); g.prev_impressions += (c.prev_impressions || 0);
+    g.prev_clicks += (c.prev_clicks || 0); g.prev_installs += (c.prev_installs || 0);
     g._formats.add(c.format || "Other");
     map.set(key, g);
   });
@@ -151,11 +171,15 @@ function aggregateBy(creatives, keyFn) {
 const aggregateByName = creatives => aggregateBy(creatives, c => c.name);
 const aggregateByFormat = creatives => aggregateBy(creatives, c => c.format || "Other");
 
-// Per-ad row: guarantee installs/cpi/format exist even for older data files.
+// Per-ad row: guarantee installs/cpi/format/engagement exist even for older data files.
 function normalize(c) {
   const installs = c.installs || 0;
   const cpi = c.cpi != null ? c.cpi : (installs ? c.spend / installs : 0);
-  return {...c, ads: 1, installs, cpi, format: c.format || "Other", spend_vnd: c.spend * SGD_TO_VND, cpi_vnd: cpi * SGD_TO_VND};
+  const engagement = c.engagement || 0;
+  return {...c, ads: 1, installs, cpi, engagement, format: c.format || "Other",
+    eng_rate: c.eng_rate != null ? c.eng_rate : (c.impressions ? engagement / c.impressions * 100 : 0),
+    spend_vnd: c.spend * SGD_TO_VND, cpi_vnd: cpi * SGD_TO_VND,
+    ...deltas(c.ctr || 0, cpi, c.prev_impressions || 0, c.prev_clicks || 0, c.prev_spend || 0, c.prev_installs || 0)};
 }
 
 function renderCards() {
@@ -263,11 +287,13 @@ const COLS = [
   {k: "impressions", label: "Impr.", f: fmtInt},
   {k: "reach", label: "Reach", f: fmtInt},
   {k: "clicks", label: "Clicks", f: fmtInt},
-  {k: "ctr", label: "CTR", f: fmtPct},
+  {k: "ctr", label: "CTR", f: fmtPct, d: "ctr_d", goodDown: false},
   {k: "cpc", label: "CPC", f: fmtMoney},
   {k: "cpm", label: "CPM", f: fmtMoney},
+  {k: "engagement", label: "Post Eng.", f: fmtDash(fmtInt)},
+  {k: "eng_rate", label: "ER", f: fmtDash(fmtPct)},
   {k: "installs", label: "Installs", f: fmtDash(fmtInt)},
-  {k: "cpi", label: "CPI", f: fmtDash(fmtMoney)},
+  {k: "cpi", label: "CPI", f: fmtDash(fmtMoney), d: "cpi_d", goodDown: true},
   {k: "cpi_vnd", label: "CPI (₫)", f: fmtDash(fmtVnd)},
   {k: "frequency", label: "Freq", f: freqBadge},
 ];
@@ -291,9 +317,20 @@ function tableHTML(rows, cols, sortable) {
       const tag = r.ads > 1 ? `<span class="pill">×${r.ads} ads</span>` : "";
       return `<td class="name" title="${r.name}">${r.name}${tag}</td>`;
     }
-    return `<td>${c.f ? c.f(r[c.k]) : r[c.k]}</td>`;
+    const val = c.f ? c.f(r[c.k]) : r[c.k];
+    const badge = c.d ? deltaBadge(r[c.d], c.goodDown) : "";
+    return `<td>${val}${badge}</td>`;
   }).join("") + "</tr>").join("");
   return `<div style="overflow-x:auto"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
+}
+
+// Small ▲/▼ % change badge vs previous period. goodDown=true means a drop is good (e.g. CPI).
+function deltaBadge(pct, goodDown) {
+  if (pct == null || !isFinite(pct)) return "";
+  const up = pct >= 0;
+  const good = goodDown ? !up : up;
+  const cls = Math.abs(pct) < 0.5 ? "d-flat" : (good ? "d-good" : "d-bad");
+  return ` <span class="delta ${cls}" title="vs previous period">${up ? "▲" : "▼"}${Math.abs(pct).toFixed(0)}%</span>`;
 }
 
 function renderPanel() {

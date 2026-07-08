@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,9 +72,9 @@
   <div class="cards" id="cards"></div>
   <div class="tabs" id="tabs"></div>
   <div class="controls">
-    <span class="ctl-label">Chế độ xem:</span>
-    <button class="ctl" id="btn-grouped">Gom theo creative</button>
-    <button class="ctl" id="btn-perad">Từng ad</button>
+    <span class="ctl-label">View:</span>
+    <button class="ctl" id="btn-grouped">Group by creative</button>
+    <button class="ctl" id="btn-perad">Per ad</button>
   </div>
   <div id="panel"></div>
 
@@ -233,13 +233,13 @@ fetch("./data/latest.json?v=" + Date.now())
     sel.value = curRange;
     sel.onchange = () => applyRange(sel.value);
 
-    document.getElementById("generated").textContent = "Cập nhật: " + (d.generated_at || "").replace("T", " ").replace("Z", " UTC");
-    document.getElementById("foot").textContent = "Freq badge:  <3× (ok) · 3–7× (theo dõi) · ≥7× (cao)  ·  Gom theo creative: reach là tổng (ước lượng)  —  data từ Meta Marketing API";
+    document.getElementById("generated").textContent = "Updated: " + (d.generated_at || "").replace("T", " ").replace("Z", " UTC");
+    document.getElementById("foot").textContent = "Freq badge:  <3× (ok) · 3–7× (watch) · ≥7× (high)  ·  Group by creative: reach is summed (estimate)  —  data from Meta Marketing API";
     document.getElementById("btn-grouped").onclick = () => setView(true);
     document.getElementById("btn-perad").onclick = () => setView(false);
     applyRange(curRange);
   })
-  .catch(e => { document.getElementById("panel").innerHTML = `<div class="err">Không load được data/latest.json<br>${e}</div>`; });
+  .catch(e => { document.getElementById("panel").innerHTML = `<div class="err">Failed to load data/latest.json<br>${e}</div>`; });
 </script>
 </body>
 </html>

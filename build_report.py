@@ -43,11 +43,11 @@ GROUPS = {
 
 # Time ranges pre-built into the dashboard (dropdown). key = Meta date_preset.
 PRESETS = [
-    ("yesterday",  "Hôm qua"),
-    ("last_7d",    "7 ngày qua"),
-    ("last_30d",   "30 ngày qua"),
-    ("this_month", "Tháng này"),
-    ("last_month", "Tháng trước"),
+    ("yesterday",  "Yesterday"),
+    ("last_7d",    "Last 7 days"),
+    ("last_30d",   "Last 30 days"),
+    ("this_month", "This month"),
+    ("last_month", "Last month"),
 ]
 DEFAULT_RANGE = "last_30d"
 

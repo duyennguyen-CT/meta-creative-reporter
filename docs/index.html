@@ -25,6 +25,13 @@
   .card .k { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
   .card .v { font-size: 24px; font-weight: 700; margin-top: 6px; }
   .card .v.accent { color: var(--accent); }
+  .insights { background: #eff4ff; border: 1px solid #dbe4ff; border-radius: 12px; padding: 16px 20px; margin: 22px 0; }
+  .insights .ins-head { font-size: 12px; font-weight: 700; letter-spacing: .04em; color: #3b5bdb; margin-bottom: 8px; }
+  .insights .ins-row { padding: 8px 0; border-top: 1px solid #e0e7ff; font-size: 13px; line-height: 1.5; }
+  .insights .ins-row:first-of-type { border-top: none; }
+  .insights .ins-row::before { content: "→ "; color: #3b5bdb; font-weight: 700; }
+  .insights .ins-row b { font-weight: 700; }
+  .insights .warn::before { content: "⚠ "; }
   .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 14px; }
   .tab {
     border: 1px solid var(--line); background: var(--card); border-radius: 999px;
@@ -70,6 +77,7 @@
   </header>
 
   <div class="cards" id="cards"></div>
+  <div class="insights" id="insights" style="display:none"></div>
   <div class="tabs" id="tabs"></div>
   <div class="controls">
     <span class="ctl-label">View:</span>
@@ -167,6 +175,74 @@ function renderCards() {
   document.getElementById("cards").innerHTML = cards.map(c =>
     `<div class="card"><div class="k">${c.k}</div><div class="v ${c.accent ? "accent" : ""}">${c.v}</div></div>`
   ).join("");
+}
+
+// Auto-generated creative insights for the selected range (all accounts).
+function computeInsights(accounts) {
+  const all = [];
+  accounts.forEach(a => a.creatives.forEach(c => all.push({...normalize(c), account: a.label})));
+  if (!all.length) return [];
+
+  const sum = k => all.reduce((s, c) => s + (c[k] || 0), 0);
+  const spend = sum("spend"), installs = sum("installs"), impr = sum("impressions"), clicks = sum("clicks");
+  const ctr = impr ? clicks / impr * 100 : 0;
+  const cpi = installs ? spend / installs : 0;
+  const out = [];
+
+  // 1) Overview
+  out.push(`<b>${fmtInt(all.length)}</b> creatives across <b>${accounts.length}</b> accounts · Spend <b>${fmtMoney(spend)}</b>`
+    + (installs ? ` · <b>${fmtInt(installs)}</b> installs @ CPI ${fmtMoney(cpi)}` : "")
+    + ` · Avg CTR ${fmtPct(ctr)}.`);
+
+  // 2) Format that captures the most spend
+  const fmt = aggregateByFormat(all).sort((a, b) => b.spend - a.spend);
+  if (fmt.length) {
+    const lead = fmt[0];
+    out.push(`Top format by spend: <b>${lead.name}</b> — ${fmtMoney(lead.spend)} `
+      + `(${spend ? Math.round(lead.spend / spend * 100) : 0}% of spend, ${lead.ads} ads, CTR ${fmtPct(lead.ctr)}`
+      + (lead.installs ? `, CPI ${fmtMoney(lead.cpi)}` : "") + ").");
+  }
+
+  // 3) Most efficient format by CPI (only when installs exist to compare)
+  const withInst = fmt.filter(f => f.installs > 0);
+  if (withInst.length > 1) {
+    const best = withInst.slice().sort((a, b) => a.cpi - b.cpi)[0];
+    out.push(`Most efficient format: <b>${best.name}</b> at CPI ${fmtMoney(best.cpi)} on ${fmtInt(best.installs)} installs.`);
+  }
+
+  // 4) Highest-spend creative
+  const topSpend = all.slice().sort((a, b) => b.spend - a.spend)[0];
+  out.push(`Highest-spend creative: <b>${topSpend.name}</b> (${topSpend.account}) — ${fmtMoney(topSpend.spend)}, CTR ${fmtPct(topSpend.ctr)}`
+    + (topSpend.installs ? `, CPI ${fmtMoney(topSpend.cpi)}` : "") + ".");
+
+  // 5) Best CPI creative (min 5 installs to avoid noise)
+  const cand = all.filter(c => c.installs >= 5);
+  if (cand.length) {
+    const bestCpi = cand.slice().sort((a, b) => a.cpi - b.cpi)[0];
+    out.push(`Best CPI: <b>${bestCpi.name}</b> (${bestCpi.account}) — CPI ${fmtMoney(bestCpi.cpi)} on ${fmtInt(bestCpi.installs)} installs.`);
+  }
+
+  // 6) Frequency fatigue watch
+  const fatig = all.filter(c => c.frequency >= 7);
+  if (fatig.length) {
+    const worst = fatig.slice().sort((a, b) => b.frequency - a.frequency)[0];
+    out.push({warn: true, html: `Frequency watch: <b>${fatig.length}</b> creatives at ≥7× `
+      + `(highest ${worst.frequency.toFixed(1)}× — ${worst.name}, ${worst.account}). Consider refreshing the creative.`});
+  }
+
+  return out;
+}
+
+function renderInsights() {
+  const box = document.getElementById("insights");
+  const rows = computeInsights(DATA.accounts);
+  if (!rows.length) { box.style.display = "none"; return; }
+  const period = (RANGES[curRange] && RANGES[curRange].period_label) || "";
+  box.style.display = "";
+  box.innerHTML = `<div class="ins-head">💡 KEY INSIGHTS${period ? " — " + period.toUpperCase() : ""}</div>`
+    + rows.map(r => typeof r === "string"
+        ? `<div class="ins-row">${r}</div>`
+        : `<div class="ins-row warn">${r.html}</div>`).join("");
 }
 
 function renderTabs() {
@@ -269,7 +345,7 @@ function applyRange(key) {
   DATA = {accounts: RANGES[key].accounts};
   activeIdx = Math.min(Math.max(activeIdx, 0), DATA.accounts.length - 1);
   document.getElementById("period").textContent = RANGES[key].period_label || "";
-  renderCards(); renderTabs(); renderControls(); renderPanel();
+  renderCards(); renderInsights(); renderTabs(); renderControls(); renderPanel();
 }
 
 fetch("./data/latest.json?v=" + Date.now())

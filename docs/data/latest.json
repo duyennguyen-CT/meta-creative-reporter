@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T09:34:17Z",
+  "generated_at": "2026-07-08T09:37:55Z",
   "currency": "SGD",
   "default_range": "last_30d",
   "ranges": {
@@ -25,7 +25,7 @@
               "frequency": 1.2,
               "installs": 44,
               "cpi": 0.41,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442654980099",
@@ -40,7 +40,7 @@
               "frequency": 1.18,
               "installs": 18,
               "cpi": 0.85,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442654970099",
@@ -55,7 +55,7 @@
               "frequency": 1.36,
               "installs": 2,
               "cpi": 1.15,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655010099",
@@ -70,7 +70,7 @@
               "frequency": 1.19,
               "installs": 4,
               "cpi": 0.56,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655090099",
@@ -85,7 +85,7 @@
               "frequency": 1.05,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655050099",
@@ -100,7 +100,7 @@
               "frequency": 1.06,
               "installs": 2,
               "cpi": 0.17,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244320634130099",
@@ -115,7 +115,7 @@
               "frequency": 1.33,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655040099",
@@ -130,7 +130,7 @@
               "frequency": 1.06,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120245143289250099",
@@ -145,7 +145,7 @@
               "frequency": 1.15,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244320571880099",
@@ -160,7 +160,7 @@
               "frequency": 1.0,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883160010099",
@@ -175,7 +175,7 @@
               "frequency": 1.1,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883188630099",
@@ -190,7 +190,7 @@
               "frequency": 1.0,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883159990099",
@@ -205,7 +205,7 @@
               "frequency": 1.25,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243828817250099",
@@ -220,7 +220,7 @@
               "frequency": 1.0,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             }
           ]
         },
@@ -242,7 +242,7 @@
               "frequency": 2.56,
               "installs": 22,
               "cpi": 0.85,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120232817764320328",
@@ -257,7 +257,7 @@
               "frequency": 1.1,
               "installs": 24,
               "cpi": 0.71,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120233015084510328",
@@ -272,7 +272,7 @@
               "frequency": 1.04,
               "installs": 148,
               "cpi": 0.11,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120226363940780328",
@@ -287,7 +287,7 @@
               "frequency": 1.98,
               "installs": 30,
               "cpi": 0.45,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120220896915150328",
@@ -302,7 +302,7 @@
               "frequency": 1.81,
               "installs": 36,
               "cpi": 0.35,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364560200328",
@@ -317,7 +317,7 @@
               "frequency": 2.02,
               "installs": 2,
               "cpi": 5.03,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364736780328",
@@ -332,7 +332,7 @@
               "frequency": 1.67,
               "installs": 12,
               "cpi": 0.48,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364583460328",
@@ -347,7 +347,7 @@
               "frequency": 1.62,
               "installs": 8,
               "cpi": 0.69,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226830255230328",
@@ -362,7 +362,7 @@
               "frequency": 1.72,
               "installs": 22,
               "cpi": 0.22,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364128630328",
@@ -377,7 +377,7 @@
               "frequency": 1.4,
               "installs": 38,
               "cpi": 0.09,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120240978775420328",
@@ -392,7 +392,7 @@
               "frequency": 1.3,
               "installs": 2,
               "cpi": 1.28,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233531405880328",
@@ -407,7 +407,7 @@
               "frequency": 1.17,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120226830362470328",
@@ -422,7 +422,7 @@
               "frequency": 1.39,
               "installs": 10,
               "cpi": 0.22,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226366051960328",
@@ -437,7 +437,7 @@
               "frequency": 1.64,
               "installs": 4,
               "cpi": 0.53,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226504977920328",
@@ -452,7 +452,7 @@
               "frequency": 1.65,
               "installs": 2,
               "cpi": 0.7,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120240979953970328",
@@ -467,7 +467,7 @@
               "frequency": 1.64,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120240979790010328",
@@ -482,7 +482,7 @@
               "frequency": 1.38,
               "installs": 2,
               "cpi": 0.47,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364222810328",
@@ -497,7 +497,7 @@
               "frequency": 1.2,
               "installs": 2,
               "cpi": 0.39,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120240978910050328",
@@ -512,7 +512,7 @@
               "frequency": 1.1,
               "installs": 2,
               "cpi": 0.3,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233531115460328",
@@ -527,7 +527,7 @@
               "frequency": 1.05,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120226364600000328",
@@ -542,7 +542,7 @@
               "frequency": 1.06,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226504977940328",
@@ -557,7 +557,7 @@
               "frequency": 1.02,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226367218710328",
@@ -572,7 +572,7 @@
               "frequency": 1.14,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233016018770328",
@@ -587,7 +587,7 @@
               "frequency": 1.03,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Image"
             },
             {
               "id": "120226364040240328",
@@ -602,7 +602,7 @@
               "frequency": 1.08,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -624,7 +624,7 @@
               "frequency": 2.81,
               "installs": 8,
               "cpi": 1.26,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745473300186",
@@ -639,7 +639,7 @@
               "frequency": 1.97,
               "installs": 4,
               "cpi": 2.29,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745589160186",
@@ -654,7 +654,7 @@
               "frequency": 2.29,
               "installs": 14,
               "cpi": 0.65,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744311770186",
@@ -669,7 +669,7 @@
               "frequency": 2.08,
               "installs": 4,
               "cpi": 1.28,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744743180186",
@@ -684,7 +684,7 @@
               "frequency": 2.06,
               "installs": 6,
               "cpi": 0.52,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745080030186",
@@ -699,7 +699,7 @@
               "frequency": 1.31,
               "installs": 2,
               "cpi": 1.01,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744573250186",
@@ -714,7 +714,7 @@
               "frequency": 1.27,
               "installs": 6,
               "cpi": 0.31,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745243740186",
@@ -729,7 +729,7 @@
               "frequency": 1.23,
               "installs": 2,
               "cpi": 0.92,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -751,7 +751,7 @@
               "frequency": 1.41,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120249931254330478",
@@ -766,7 +766,7 @@
               "frequency": 1.3,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120249931147860478",
@@ -781,7 +781,7 @@
               "frequency": 1.58,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -803,7 +803,7 @@
               "frequency": 2.93,
               "installs": 10,
               "cpi": 2.75,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120221688220100308",
@@ -818,7 +818,7 @@
               "frequency": 2.39,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566800308",
@@ -833,7 +833,7 @@
               "frequency": 1.51,
               "installs": 20,
               "cpi": 0.7,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217657110308",
@@ -848,7 +848,7 @@
               "frequency": 1.77,
               "installs": 22,
               "cpi": 0.63,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566720308",
@@ -863,7 +863,7 @@
               "frequency": 1.82,
               "installs": 16,
               "cpi": 0.83,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356050308",
@@ -878,7 +878,7 @@
               "frequency": 1.63,
               "installs": 10,
               "cpi": 1.23,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182370308",
@@ -893,7 +893,7 @@
               "frequency": 1.76,
               "installs": 14,
               "cpi": 0.8,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356100308",
@@ -908,7 +908,7 @@
               "frequency": 2.11,
               "installs": 2,
               "cpi": 4.85,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182310308",
@@ -923,7 +923,7 @@
               "frequency": 1.39,
               "installs": 22,
               "cpi": 0.42,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227900223400308",
@@ -938,7 +938,7 @@
               "frequency": 2.33,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566690308",
@@ -953,7 +953,7 @@
               "frequency": 1.71,
               "installs": 6,
               "cpi": 1.45,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566810308",
@@ -968,7 +968,7 @@
               "frequency": 1.42,
               "installs": 14,
               "cpi": 0.59,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217657130308",
@@ -983,7 +983,7 @@
               "frequency": 1.55,
               "installs": 10,
               "cpi": 0.73,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217656490308",
@@ -998,7 +998,7 @@
               "frequency": 1.63,
               "installs": 2,
               "cpi": 2.94,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120224742021190308",
@@ -1013,7 +1013,7 @@
               "frequency": 1.61,
               "installs": 2,
               "cpi": 2.62,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356090308",
@@ -1028,7 +1028,7 @@
               "frequency": 1.78,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227902712920308",
@@ -1043,7 +1043,7 @@
               "frequency": 1.55,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235846343620308",
@@ -1058,7 +1058,7 @@
               "frequency": 1.35,
               "installs": 6,
               "cpi": 0.72,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356120308",
@@ -1073,7 +1073,7 @@
               "frequency": 1.34,
               "installs": 4,
               "cpi": 1.07,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227899745440308",
@@ -1088,7 +1088,7 @@
               "frequency": 1.64,
               "installs": 2,
               "cpi": 2.07,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235846343630308",
@@ -1103,7 +1103,7 @@
               "frequency": 1.55,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182410308",
@@ -1118,7 +1118,7 @@
               "frequency": 1.41,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182460308",
@@ -1133,7 +1133,7 @@
               "frequency": 1.19,
               "installs": 6,
               "cpi": 0.42,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566700308",
@@ -1148,7 +1148,7 @@
               "frequency": 1.22,
               "installs": 4,
               "cpi": 0.57,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356080308",
@@ -1163,7 +1163,7 @@
               "frequency": 1.52,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         }
@@ -1191,7 +1191,7 @@
               "frequency": 1.64,
               "installs": 106,
               "cpi": 0.58,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655100099",
@@ -1206,7 +1206,7 @@
               "frequency": 1.49,
               "installs": 170,
               "cpi": 0.36,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655090099",
@@ -1221,7 +1221,7 @@
               "frequency": 1.5,
               "installs": 124,
               "cpi": 0.46,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442654970099",
@@ -1236,7 +1236,7 @@
               "frequency": 1.64,
               "installs": 34,
               "cpi": 1.1,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655010099",
@@ -1251,7 +1251,7 @@
               "frequency": 1.41,
               "installs": 56,
               "cpi": 0.51,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883124010099",
@@ -1266,7 +1266,7 @@
               "frequency": 2.54,
               "installs": 6,
               "cpi": 3.07,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883283900099",
@@ -1281,7 +1281,7 @@
               "frequency": 2.61,
               "installs": 4,
               "cpi": 4.42,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655050099",
@@ -1296,7 +1296,7 @@
               "frequency": 1.42,
               "installs": 14,
               "cpi": 0.76,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243828723150099",
@@ -1311,7 +1311,7 @@
               "frequency": 1.23,
               "installs": 10,
               "cpi": 0.59,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883188640099",
@@ -1326,7 +1326,7 @@
               "frequency": 1.27,
               "installs": 10,
               "cpi": 0.55,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442654990099",
@@ -1341,7 +1341,7 @@
               "frequency": 1.39,
               "installs": 4,
               "cpi": 0.97,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243828858220099",
@@ -1356,7 +1356,7 @@
               "frequency": 1.36,
               "installs": 8,
               "cpi": 0.29,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883160010099",
@@ -1371,7 +1371,7 @@
               "frequency": 1.15,
               "installs": 2,
               "cpi": 0.95,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655060099",
@@ -1386,7 +1386,7 @@
               "frequency": 1.25,
               "installs": 4,
               "cpi": 0.44,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244320634130099",
@@ -1401,7 +1401,7 @@
               "frequency": 1.28,
               "installs": 2,
               "cpi": 0.64,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120245143289250099",
@@ -1416,7 +1416,7 @@
               "frequency": 1.38,
               "installs": 2,
               "cpi": 0.39,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244320571910099",
@@ -1431,7 +1431,7 @@
               "frequency": 1.16,
               "installs": 2,
               "cpi": 0.3,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244320571880099",
@@ -1446,7 +1446,7 @@
               "frequency": 1.14,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655080099",
@@ -1461,7 +1461,7 @@
               "frequency": 1.21,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120245143269690099",
@@ -1476,7 +1476,7 @@
               "frequency": 1.12,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244320634120099",
@@ -1491,7 +1491,7 @@
               "frequency": 1.13,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655040099",
@@ -1506,7 +1506,7 @@
               "frequency": 1.05,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883159990099",
@@ -1521,7 +1521,7 @@
               "frequency": 1.25,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243828817250099",
@@ -1536,7 +1536,7 @@
               "frequency": 1.11,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883188650099",
@@ -1551,7 +1551,7 @@
               "frequency": 1.22,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             }
           ]
         },
@@ -1573,7 +1573,7 @@
               "frequency": 1.17,
               "installs": 660,
               "cpi": 0.13,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120232817764320328",
@@ -1588,7 +1588,7 @@
               "frequency": 1.51,
               "installs": 176,
               "cpi": 0.46,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120240979010470328",
@@ -1603,7 +1603,7 @@
               "frequency": 4.63,
               "installs": 56,
               "cpi": 1.22,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364583460328",
@@ -1618,7 +1618,7 @@
               "frequency": 3.67,
               "installs": 82,
               "cpi": 0.53,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226830255230328",
@@ -1633,7 +1633,7 @@
               "frequency": 4.12,
               "installs": 136,
               "cpi": 0.31,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226363940780328",
@@ -1648,7 +1648,7 @@
               "frequency": 2.73,
               "installs": 104,
               "cpi": 0.34,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120240978910050328",
@@ -1663,7 +1663,7 @@
               "frequency": 3.79,
               "installs": 36,
               "cpi": 0.95,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120220896915150328",
@@ -1678,7 +1678,7 @@
               "frequency": 2.5,
               "installs": 152,
               "cpi": 0.2,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364560200328",
@@ -1693,7 +1693,7 @@
               "frequency": 3.35,
               "installs": 20,
               "cpi": 1.49,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364736780328",
@@ -1708,7 +1708,7 @@
               "frequency": 2.61,
               "installs": 38,
               "cpi": 0.76,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364128630328",
@@ -1723,7 +1723,7 @@
               "frequency": 2.07,
               "installs": 82,
               "cpi": 0.18,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226363989290328",
@@ -1738,7 +1738,7 @@
               "frequency": 2.41,
               "installs": 92,
               "cpi": 0.15,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364772120328",
@@ -1753,7 +1753,7 @@
               "frequency": 2.02,
               "installs": 24,
               "cpi": 0.52,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233531405880328",
@@ -1768,7 +1768,7 @@
               "frequency": 1.56,
               "installs": 4,
               "cpi": 2.71,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120240978775420328",
@@ -1783,7 +1783,7 @@
               "frequency": 1.79,
               "installs": 6,
               "cpi": 1.57,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364040240328",
@@ -1798,7 +1798,7 @@
               "frequency": 1.93,
               "installs": 56,
               "cpi": 0.16,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120223174209700328",
@@ -1813,7 +1813,7 @@
               "frequency": 1.69,
               "installs": 14,
               "cpi": 0.51,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226366051960328",
@@ -1828,7 +1828,7 @@
               "frequency": 2.81,
               "installs": 6,
               "cpi": 1.12,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120223173463840328",
@@ -1843,7 +1843,7 @@
               "frequency": 1.66,
               "installs": 110,
               "cpi": 0.06,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226830362470328",
@@ -1858,7 +1858,7 @@
               "frequency": 1.65,
               "installs": 36,
               "cpi": 0.18,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364600000328",
@@ -1873,7 +1873,7 @@
               "frequency": 1.59,
               "installs": 6,
               "cpi": 0.92,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226504977920328",
@@ -1888,7 +1888,7 @@
               "frequency": 2.35,
               "installs": 4,
               "cpi": 0.8,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364180420328",
@@ -1903,7 +1903,7 @@
               "frequency": 1.65,
               "installs": 22,
               "cpi": 0.12,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233531115460328",
@@ -1918,7 +1918,7 @@
               "frequency": 1.15,
               "installs": 4,
               "cpi": 0.62,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120226367272390328",
@@ -1933,7 +1933,7 @@
               "frequency": 2.09,
               "installs": 2,
               "cpi": 1.19,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -1955,7 +1955,7 @@
               "frequency": 7.97,
               "installs": 52,
               "cpi": 1.34,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745589160186",
@@ -1970,7 +1970,7 @@
               "frequency": 5.27,
               "installs": 130,
               "cpi": 0.48,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745473300186",
@@ -1985,7 +1985,7 @@
               "frequency": 4.59,
               "installs": 50,
               "cpi": 1.24,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744311770186",
@@ -2000,7 +2000,7 @@
               "frequency": 4.75,
               "installs": 46,
               "cpi": 0.73,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744743180186",
@@ -2015,7 +2015,7 @@
               "frequency": 4.34,
               "installs": 28,
               "cpi": 0.75,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745080030186",
@@ -2030,7 +2030,7 @@
               "frequency": 2.02,
               "installs": 30,
               "cpi": 0.46,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744573250186",
@@ -2045,7 +2045,7 @@
               "frequency": 2.18,
               "installs": 40,
               "cpi": 0.34,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745243740186",
@@ -2060,7 +2060,7 @@
               "frequency": 2.09,
               "installs": 24,
               "cpi": 0.56,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -2082,7 +2082,7 @@
               "frequency": 1.39,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120249931147860478",
@@ -2097,7 +2097,7 @@
               "frequency": 1.52,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120249930993170478",
@@ -2112,7 +2112,7 @@
               "frequency": 1.44,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -2134,7 +2134,7 @@
               "frequency": 8.05,
               "installs": 78,
               "cpi": 1.67,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120221688220100308",
@@ -2149,7 +2149,7 @@
               "frequency": 7.18,
               "installs": 18,
               "cpi": 4.43,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356050308",
@@ -2164,7 +2164,7 @@
               "frequency": 3.54,
               "installs": 86,
               "cpi": 0.88,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566720308",
@@ -2179,7 +2179,7 @@
               "frequency": 4.03,
               "installs": 104,
               "cpi": 0.69,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217657110308",
@@ -2194,7 +2194,7 @@
               "frequency": 3.46,
               "installs": 126,
               "cpi": 0.56,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566810308",
@@ -2209,7 +2209,7 @@
               "frequency": 2.49,
               "installs": 110,
               "cpi": 0.61,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566800308",
@@ -2224,7 +2224,7 @@
               "frequency": 2.62,
               "installs": 116,
               "cpi": 0.57,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182370308",
@@ -2239,7 +2239,7 @@
               "frequency": 4.29,
               "installs": 38,
               "cpi": 1.71,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182310308",
@@ -2254,7 +2254,7 @@
               "frequency": 2.49,
               "installs": 124,
               "cpi": 0.47,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356100308",
@@ -2269,7 +2269,7 @@
               "frequency": 5.83,
               "installs": 14,
               "cpi": 3.84,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566690308",
@@ -2284,7 +2284,7 @@
               "frequency": 3.71,
               "installs": 34,
               "cpi": 1.42,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227900223400308",
@@ -2299,7 +2299,7 @@
               "frequency": 5.46,
               "installs": 18,
               "cpi": 2.34,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227902712920308",
@@ -2314,7 +2314,7 @@
               "frequency": 2.92,
               "installs": 36,
               "cpi": 0.92,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217657130308",
@@ -2329,7 +2329,7 @@
               "frequency": 2.81,
               "installs": 46,
               "cpi": 0.68,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235846343620308",
@@ -2344,7 +2344,7 @@
               "frequency": 2.49,
               "installs": 30,
               "cpi": 1.03,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217656490308",
@@ -2359,7 +2359,7 @@
               "frequency": 3.2,
               "installs": 4,
               "cpi": 6.54,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227899745440308",
@@ -2374,7 +2374,7 @@
               "frequency": 3.58,
               "installs": 2,
               "cpi": 11.13,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356120308",
@@ -2389,7 +2389,7 @@
               "frequency": 2.02,
               "installs": 14,
               "cpi": 1.47,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356090308",
@@ -2404,7 +2404,7 @@
               "frequency": 3.19,
               "installs": 4,
               "cpi": 4.87,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182460308",
@@ -2419,7 +2419,7 @@
               "frequency": 2.06,
               "installs": 20,
               "cpi": 0.86,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235846343650308",
@@ -2434,7 +2434,7 @@
               "frequency": 2.84,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566700308",
@@ -2449,7 +2449,7 @@
               "frequency": 1.84,
               "installs": 24,
               "cpi": 0.53,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217656470308",
@@ -2464,7 +2464,7 @@
               "frequency": 2.03,
               "installs": 4,
               "cpi": 2.46,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356420308",
@@ -2479,7 +2479,7 @@
               "frequency": 1.58,
               "installs": 2,
               "cpi": 4.6,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235214543190308",
@@ -2494,7 +2494,7 @@
               "frequency": 1.67,
               "installs": 20,
               "cpi": 0.45,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         }
@@ -2522,7 +2522,7 @@
               "frequency": 2.48,
               "installs": 636,
               "cpi": 0.61,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243445116360099",
@@ -2537,7 +2537,7 @@
               "frequency": 2.04,
               "installs": 428,
               "cpi": 0.62,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655090099",
@@ -2552,7 +2552,7 @@
               "frequency": 1.97,
               "installs": 668,
               "cpi": 0.39,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655010099",
@@ -2567,7 +2567,7 @@
               "frequency": 1.79,
               "installs": 212,
               "cpi": 0.63,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244320634150099",
@@ -2582,7 +2582,7 @@
               "frequency": 1.94,
               "installs": 86,
               "cpi": 0.88,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442654980099",
@@ -2597,7 +2597,7 @@
               "frequency": 1.65,
               "installs": 118,
               "cpi": 0.61,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442654970099",
@@ -2612,7 +2612,7 @@
               "frequency": 1.8,
               "installs": 50,
               "cpi": 1.39,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655100099",
@@ -2627,7 +2627,7 @@
               "frequency": 1.49,
               "installs": 184,
               "cpi": 0.35,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411440730099",
@@ -2642,7 +2642,7 @@
               "frequency": 3.85,
               "installs": 10,
               "cpi": 4.78,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244410119680099",
@@ -2657,7 +2657,7 @@
               "frequency": 3.13,
               "installs": 6,
               "cpi": 7.96,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411440670099",
@@ -2672,7 +2672,7 @@
               "frequency": 3.58,
               "installs": 6,
               "cpi": 7.92,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411017410099",
@@ -2687,7 +2687,7 @@
               "frequency": 4.11,
               "installs": 6,
               "cpi": 7.91,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411129470099",
@@ -2702,7 +2702,7 @@
               "frequency": 2.73,
               "installs": 10,
               "cpi": 4.74,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411440630099",
@@ -2717,7 +2717,7 @@
               "frequency": 3.56,
               "installs": 4,
               "cpi": 11.82,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244410861900099",
@@ -2732,7 +2732,7 @@
               "frequency": 3.1,
               "installs": 8,
               "cpi": 5.9,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411440750099",
@@ -2747,7 +2747,7 @@
               "frequency": 4.5,
               "installs": 10,
               "cpi": 4.72,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244410918070099",
@@ -2762,7 +2762,7 @@
               "frequency": 2.9,
               "installs": 10,
               "cpi": 4.71,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243828723150099",
@@ -2777,7 +2777,7 @@
               "frequency": 1.76,
               "installs": 46,
               "cpi": 1.02,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411440690099",
@@ -2792,7 +2792,7 @@
               "frequency": 3.78,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243829370600099",
@@ -2807,7 +2807,7 @@
               "frequency": 3.58,
               "installs": 18,
               "cpi": 2.49,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243830106130099",
@@ -2822,7 +2822,7 @@
               "frequency": 4.18,
               "installs": 10,
               "cpi": 4.45,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243830106140099",
@@ -2837,7 +2837,7 @@
               "frequency": 3.63,
               "installs": 8,
               "cpi": 5.54,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243828858220099",
@@ -2852,7 +2852,7 @@
               "frequency": 1.55,
               "installs": 52,
               "cpi": 0.75,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243443715230099",
@@ -2867,7 +2867,7 @@
               "frequency": 4.44,
               "installs": 10,
               "cpi": 3.59,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243444622780099",
@@ -2882,7 +2882,7 @@
               "frequency": 3.29,
               "installs": 14,
               "cpi": 2.54,
-              "format": "Other"
+              "format": "Video"
             }
           ]
         },
@@ -2904,7 +2904,7 @@
               "frequency": 10.44,
               "installs": 526,
               "cpi": 0.74,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120232817764320328",
@@ -2919,7 +2919,7 @@
               "frequency": 1.91,
               "installs": 510,
               "cpi": 0.54,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120233015084510328",
@@ -2934,7 +2934,7 @@
               "frequency": 1.32,
               "installs": 1714,
               "cpi": 0.14,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120220896915150328",
@@ -2949,7 +2949,7 @@
               "frequency": 4.51,
               "installs": 686,
               "cpi": 0.24,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364040240328",
@@ -2964,7 +2964,7 @@
               "frequency": 4.4,
               "installs": 578,
               "cpi": 0.2,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364772120328",
@@ -2979,7 +2979,7 @@
               "frequency": 3.67,
               "installs": 242,
               "cpi": 0.38,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120223173463840328",
@@ -2994,7 +2994,7 @@
               "frequency": 3.39,
               "installs": 800,
               "cpi": 0.11,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120240979010470328",
@@ -3009,7 +3009,7 @@
               "frequency": 4.13,
               "installs": 76,
               "cpi": 1.06,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233531405880328",
@@ -3024,7 +3024,7 @@
               "frequency": 1.78,
               "installs": 62,
               "cpi": 1.3,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120226830255230328",
@@ -3039,7 +3039,7 @@
               "frequency": 3.97,
               "installs": 220,
               "cpi": 0.3,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120240978910050328",
@@ -3054,7 +3054,7 @@
               "frequency": 3.76,
               "installs": 64,
               "cpi": 0.93,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364736780328",
@@ -3069,7 +3069,7 @@
               "frequency": 2.53,
               "installs": 76,
               "cpi": 0.6,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120240978775420328",
@@ -3084,7 +3084,7 @@
               "frequency": 2.8,
               "installs": 46,
               "cpi": 0.92,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226363940780328",
@@ -3099,7 +3099,7 @@
               "frequency": 2.79,
               "installs": 142,
               "cpi": 0.29,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364560200328",
@@ -3114,7 +3114,7 @@
               "frequency": 3.1,
               "installs": 34,
               "cpi": 1.09,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364600000328",
@@ -3129,7 +3129,7 @@
               "frequency": 2.21,
               "installs": 30,
               "cpi": 0.84,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233531115460328",
@@ -3144,7 +3144,7 @@
               "frequency": 1.29,
               "installs": 18,
               "cpi": 1.4,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120226363989290328",
@@ -3159,7 +3159,7 @@
               "frequency": 2.59,
               "installs": 114,
               "cpi": 0.2,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364759040328",
@@ -3174,7 +3174,7 @@
               "frequency": 1.88,
               "installs": 54,
               "cpi": 0.38,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364128630328",
@@ -3189,7 +3189,7 @@
               "frequency": 2.03,
               "installs": 94,
               "cpi": 0.18,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120223174209700328",
@@ -3204,7 +3204,7 @@
               "frequency": 2.14,
               "installs": 62,
               "cpi": 0.27,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226830362470328",
@@ -3219,7 +3219,7 @@
               "frequency": 1.87,
               "installs": 90,
               "cpi": 0.13,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233016018770328",
@@ -3234,7 +3234,7 @@
               "frequency": 1.25,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Image"
             },
             {
               "id": "120226364180420328",
@@ -3249,7 +3249,7 @@
               "frequency": 1.84,
               "installs": 64,
               "cpi": 0.14,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226366051960328",
@@ -3264,7 +3264,7 @@
               "frequency": 2.81,
               "installs": 6,
               "cpi": 1.12,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -3286,7 +3286,7 @@
               "frequency": 19.04,
               "installs": 244,
               "cpi": 1.43,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745473300186",
@@ -3301,7 +3301,7 @@
               "frequency": 8.56,
               "installs": 198,
               "cpi": 1.18,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745589160186",
@@ -3316,7 +3316,7 @@
               "frequency": 8.15,
               "installs": 364,
               "cpi": 0.56,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744311770186",
@@ -3331,7 +3331,7 @@
               "frequency": 8.41,
               "installs": 252,
               "cpi": 0.75,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744743180186",
@@ -3346,7 +3346,7 @@
               "frequency": 8.33,
               "installs": 138,
               "cpi": 0.79,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745243740186",
@@ -3361,7 +3361,7 @@
               "frequency": 3.54,
               "installs": 98,
               "cpi": 0.61,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745080030186",
@@ -3376,7 +3376,7 @@
               "frequency": 3.05,
               "installs": 182,
               "cpi": 0.33,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744573250186",
@@ -3391,7 +3391,7 @@
               "frequency": 3.9,
               "installs": 158,
               "cpi": 0.38,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -3413,7 +3413,7 @@
               "frequency": 1.39,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120249931147860478",
@@ -3428,7 +3428,7 @@
               "frequency": 1.52,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120249930993170478",
@@ -3443,7 +3443,7 @@
               "frequency": 1.44,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120248177609810478",
@@ -3458,7 +3458,7 @@
               "frequency": 0.0,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -3480,7 +3480,7 @@
               "frequency": 13.1,
               "installs": 292,
               "cpi": 1.68,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566810308",
@@ -3495,7 +3495,7 @@
               "frequency": 4.91,
               "installs": 732,
               "cpi": 0.56,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356050308",
@@ -3510,7 +3510,7 @@
               "frequency": 6.25,
               "installs": 322,
               "cpi": 0.96,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227900223400308",
@@ -3525,7 +3525,7 @@
               "frequency": 16.52,
               "installs": 72,
               "cpi": 3.8,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217657110308",
@@ -3540,7 +3540,7 @@
               "frequency": 4.98,
               "installs": 414,
               "cpi": 0.6,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182310308",
@@ -3555,7 +3555,7 @@
               "frequency": 3.83,
               "installs": 458,
               "cpi": 0.54,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356100308",
@@ -3570,7 +3570,7 @@
               "frequency": 12.76,
               "installs": 62,
               "cpi": 3.8,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566720308",
@@ -3585,7 +3585,7 @@
               "frequency": 5.64,
               "installs": 258,
               "cpi": 0.83,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182370308",
@@ -3600,7 +3600,7 @@
               "frequency": 6.02,
               "installs": 118,
               "cpi": 1.8,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566690308",
@@ -3615,7 +3615,7 @@
               "frequency": 5.94,
               "installs": 74,
               "cpi": 2.22,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227902712920308",
@@ -3630,7 +3630,7 @@
               "frequency": 5.2,
               "installs": 130,
               "cpi": 1.2,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120221688220100308",
@@ -3645,7 +3645,7 @@
               "frequency": 8.91,
               "installs": 44,
               "cpi": 3.26,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566800308",
@@ -3660,7 +3660,7 @@
               "frequency": 2.99,
               "installs": 268,
               "cpi": 0.52,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235846343620308",
@@ -3675,7 +3675,7 @@
               "frequency": 3.78,
               "installs": 110,
               "cpi": 0.98,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235846343630308",
@@ -3690,7 +3690,7 @@
               "frequency": 7.16,
               "installs": 22,
               "cpi": 4.27,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235214543190308",
@@ -3705,7 +3705,7 @@
               "frequency": 2.9,
               "installs": 140,
               "cpi": 0.59,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182460308",
@@ -3720,7 +3720,7 @@
               "frequency": 2.86,
               "installs": 70,
               "cpi": 1.09,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566700308",
@@ -3735,7 +3735,7 @@
               "frequency": 2.67,
               "installs": 90,
               "cpi": 0.61,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217657130308",
@@ -3750,7 +3750,7 @@
               "frequency": 2.97,
               "installs": 58,
               "cpi": 0.92,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227899745440308",
@@ -3765,7 +3765,7 @@
               "frequency": 4.56,
               "installs": 6,
               "cpi": 7.75,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356120308",
@@ -3780,7 +3780,7 @@
               "frequency": 2.21,
               "installs": 28,
               "cpi": 1.49,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356090308",
@@ -3795,7 +3795,7 @@
               "frequency": 3.8,
               "installs": 8,
               "cpi": 4.87,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217656490308",
@@ -3810,7 +3810,7 @@
               "frequency": 3.44,
               "installs": 12,
               "cpi": 3.1,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566650308",
@@ -3825,7 +3825,7 @@
               "frequency": 2.69,
               "installs": 12,
               "cpi": 2.97,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217656470308",
@@ -3840,7 +3840,7 @@
               "frequency": 2.55,
               "installs": 4,
               "cpi": 7.41,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         }
@@ -3859,7 +3859,7 @@
               "id": "120243442654980099",
               "name": "shortcut 2",
               "spend": 66.82,
-              "impressions": 21001,
+              "impressions": 21003,
               "reach": 12482,
               "clicks": 112,
               "ctr": 0.53,
@@ -3868,13 +3868,13 @@
               "frequency": 1.68,
               "installs": 114,
               "cpi": 0.59,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655100099",
               "name": "shortcut 2",
               "spend": 66.71,
-              "impressions": 17251,
+              "impressions": 17252,
               "reach": 11304,
               "clicks": 166,
               "ctr": 0.96,
@@ -3883,7 +3883,7 @@
               "frequency": 1.53,
               "installs": 184,
               "cpi": 0.36,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655090099",
@@ -3898,7 +3898,7 @@
               "frequency": 1.5,
               "installs": 124,
               "cpi": 0.46,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442654970099",
@@ -3913,13 +3913,13 @@
               "frequency": 1.68,
               "installs": 34,
               "cpi": 1.16,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655010099",
               "name": "shortcut 3",
               "spend": 30.07,
-              "impressions": 6698,
+              "impressions": 6699,
               "reach": 4737,
               "clicks": 42,
               "ctr": 0.63,
@@ -3928,7 +3928,7 @@
               "frequency": 1.41,
               "installs": 56,
               "cpi": 0.54,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883124010099",
@@ -3943,7 +3943,7 @@
               "frequency": 2.54,
               "installs": 6,
               "cpi": 3.07,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883283900099",
@@ -3958,7 +3958,7 @@
               "frequency": 2.61,
               "installs": 4,
               "cpi": 4.42,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655050099",
@@ -3973,7 +3973,7 @@
               "frequency": 1.42,
               "installs": 16,
               "cpi": 0.67,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243828723150099",
@@ -3988,7 +3988,7 @@
               "frequency": 1.23,
               "installs": 10,
               "cpi": 0.59,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883188640099",
@@ -4003,7 +4003,7 @@
               "frequency": 1.27,
               "installs": 10,
               "cpi": 0.55,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442654990099",
@@ -4018,7 +4018,7 @@
               "frequency": 1.41,
               "installs": 4,
               "cpi": 1.0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243828858220099",
@@ -4033,7 +4033,7 @@
               "frequency": 1.36,
               "installs": 8,
               "cpi": 0.29,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883160010099",
@@ -4048,7 +4048,7 @@
               "frequency": 1.15,
               "installs": 2,
               "cpi": 0.95,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655060099",
@@ -4063,7 +4063,7 @@
               "frequency": 1.25,
               "installs": 4,
               "cpi": 0.44,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244320634130099",
@@ -4078,7 +4078,7 @@
               "frequency": 1.28,
               "installs": 2,
               "cpi": 0.64,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120245143289250099",
@@ -4093,7 +4093,7 @@
               "frequency": 1.38,
               "installs": 2,
               "cpi": 0.39,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244320571910099",
@@ -4108,7 +4108,7 @@
               "frequency": 1.15,
               "installs": 2,
               "cpi": 0.31,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244320571880099",
@@ -4123,7 +4123,7 @@
               "frequency": 1.14,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655080099",
@@ -4138,7 +4138,7 @@
               "frequency": 1.19,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120245143269690099",
@@ -4153,7 +4153,7 @@
               "frequency": 1.15,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244320634120099",
@@ -4168,7 +4168,7 @@
               "frequency": 1.13,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655040099",
@@ -4183,7 +4183,7 @@
               "frequency": 1.05,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883159990099",
@@ -4198,7 +4198,7 @@
               "frequency": 1.42,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243828817250099",
@@ -4213,7 +4213,7 @@
               "frequency": 1.14,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244883188650099",
@@ -4228,7 +4228,7 @@
               "frequency": 1.22,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             }
           ]
         },
@@ -4240,62 +4240,62 @@
             {
               "id": "120233015084510328",
               "name": "122162058026787446",
-              "spend": 96.62,
-              "impressions": 175428,
+              "spend": 96.65,
+              "impressions": 175459,
               "reach": 147376,
-              "clicks": 39024,
+              "clicks": 39035,
               "ctr": 22.25,
               "cpc": 0.0,
               "cpm": 0.55,
               "frequency": 1.19,
               "installs": 714,
               "cpi": 0.14,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120232817764320328",
               "name": "vid4",
-              "spend": 90.96,
-              "impressions": 217177,
+              "spend": 91.0,
+              "impressions": 217225,
               "reach": 143267,
               "clicks": 5629,
               "ctr": 2.59,
               "cpc": 0.02,
               "cpm": 0.42,
               "frequency": 1.52,
-              "installs": 198,
+              "installs": 200,
               "cpi": 0.46,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120240979010470328",
               "name": "SV6",
-              "spend": 82.67,
-              "impressions": 71542,
+              "spend": 82.72,
+              "impressions": 71576,
               "reach": 13954,
-              "clicks": 5383,
+              "clicks": 5384,
               "ctr": 7.52,
               "cpc": 0.02,
               "cpm": 1.16,
               "frequency": 5.13,
               "installs": 64,
               "cpi": 1.29,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364583460328",
               "name": "SV2",
               "spend": 47.0,
-              "impressions": 46165,
+              "impressions": 46174,
               "reach": 12434,
-              "clicks": 2973,
+              "clicks": 2974,
               "ctr": 6.44,
               "cpc": 0.02,
               "cpm": 1.02,
               "frequency": 3.71,
               "installs": 82,
               "cpi": 0.57,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226830255230328",
@@ -4310,29 +4310,29 @@
               "frequency": 4.14,
               "installs": 144,
               "cpi": 0.3,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120220896915150328",
               "name": "general",
-              "spend": 42.08,
-              "impressions": 31146,
-              "reach": 11036,
-              "clicks": 3524,
-              "ctr": 11.31,
+              "spend": 42.1,
+              "impressions": 31168,
+              "reach": 11038,
+              "clicks": 3528,
+              "ctr": 11.32,
               "cpc": 0.01,
               "cpm": 1.35,
               "frequency": 2.82,
               "installs": 172,
               "cpi": 0.24,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226363940780328",
               "name": "SV1",
               "spend": 41.14,
-              "impressions": 69835,
-              "reach": 24158,
+              "impressions": 69843,
+              "reach": 24182,
               "clicks": 1989,
               "ctr": 2.85,
               "cpc": 0.02,
@@ -4340,13 +4340,13 @@
               "frequency": 2.89,
               "installs": 130,
               "cpi": 0.32,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364560200328",
               "name": "SV1",
-              "spend": 34.33,
-              "impressions": 35008,
+              "spend": 34.34,
+              "impressions": 35038,
               "reach": 10002,
               "clicks": 1989,
               "ctr": 5.68,
@@ -4355,7 +4355,7 @@
               "frequency": 3.5,
               "installs": 26,
               "cpi": 1.32,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120240978910050328",
@@ -4370,43 +4370,43 @@
               "frequency": 3.79,
               "installs": 36,
               "cpi": 0.95,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364736780328",
               "name": "SV3",
-              "spend": 30.91,
-              "impressions": 23213,
+              "spend": 30.93,
+              "impressions": 23226,
               "reach": 8660,
-              "clicks": 1551,
+              "clicks": 1552,
               "ctr": 6.68,
               "cpc": 0.02,
               "cpm": 1.33,
               "frequency": 2.68,
               "installs": 44,
               "cpi": 0.7,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226363989290328",
               "name": "SV2",
-              "spend": 16.73,
-              "impressions": 31760,
+              "spend": 16.75,
+              "impressions": 31798,
               "reach": 12741,
               "clicks": 1277,
               "ctr": 4.02,
               "cpc": 0.01,
               "cpm": 0.53,
-              "frequency": 2.49,
+              "frequency": 2.5,
               "installs": 98,
               "cpi": 0.17,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364128630328",
               "name": "SV1",
-              "spend": 15.82,
-              "impressions": 26881,
+              "spend": 15.83,
+              "impressions": 26888,
               "reach": 12752,
               "clicks": 823,
               "ctr": 3.06,
@@ -4415,7 +4415,7 @@
               "frequency": 2.11,
               "installs": 86,
               "cpi": 0.18,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364772120328",
@@ -4430,22 +4430,22 @@
               "frequency": 2.02,
               "installs": 24,
               "cpi": 0.52,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233531405880328",
               "name": "vid1",
-              "spend": 12.31,
-              "impressions": 14042,
+              "spend": 12.32,
+              "impressions": 14053,
               "reach": 8816,
-              "clicks": 817,
+              "clicks": 818,
               "ctr": 5.82,
               "cpc": 0.02,
               "cpm": 0.88,
               "frequency": 1.59,
               "installs": 4,
               "cpi": 3.08,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120240978775420328",
@@ -4460,7 +4460,7 @@
               "frequency": 1.8,
               "installs": 6,
               "cpi": 1.62,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364040240328",
@@ -4475,7 +4475,7 @@
               "frequency": 1.93,
               "installs": 56,
               "cpi": 0.16,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226366051960328",
@@ -4490,28 +4490,28 @@
               "frequency": 3.04,
               "installs": 10,
               "cpi": 0.84,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120223173463840328",
               "name": "general",
-              "spend": 7.72,
-              "impressions": 14520,
+              "spend": 7.74,
+              "impressions": 14544,
               "reach": 8678,
               "clicks": 573,
-              "ctr": 3.95,
+              "ctr": 3.94,
               "cpc": 0.01,
               "cpm": 0.53,
-              "frequency": 1.67,
+              "frequency": 1.68,
               "installs": 118,
               "cpi": 0.07,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120223174209700328",
               "name": "general",
               "spend": 7.46,
-              "impressions": 13165,
+              "impressions": 13166,
               "reach": 7789,
               "clicks": 526,
               "ctr": 4.0,
@@ -4520,7 +4520,7 @@
               "frequency": 1.69,
               "installs": 14,
               "cpi": 0.53,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226830362470328",
@@ -4535,52 +4535,52 @@
               "frequency": 1.67,
               "installs": 46,
               "cpi": 0.15,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364600000328",
               "name": "SV3",
               "spend": 6.07,
-              "impressions": 6073,
+              "impressions": 6074,
               "reach": 3813,
               "clicks": 423,
-              "ctr": 6.97,
+              "ctr": 6.96,
               "cpc": 0.01,
               "cpm": 1.0,
               "frequency": 1.59,
               "installs": 6,
               "cpi": 1.01,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226504977920328",
               "name": "SV1",
               "spend": 3.83,
-              "impressions": 1872,
+              "impressions": 1873,
               "reach": 737,
               "clicks": 34,
               "ctr": 1.82,
               "cpc": 0.11,
-              "cpm": 2.05,
+              "cpm": 2.04,
               "frequency": 2.54,
               "installs": 4,
               "cpi": 0.96,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226367272390328",
               "name": "SV3",
               "spend": 3.01,
-              "impressions": 2215,
+              "impressions": 2216,
               "reach": 1079,
-              "clicks": 201,
-              "ctr": 9.07,
+              "clicks": 202,
+              "ctr": 9.12,
               "cpc": 0.01,
               "cpm": 1.36,
               "frequency": 2.05,
               "installs": 2,
               "cpi": 1.5,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364180420328",
@@ -4595,7 +4595,7 @@
               "frequency": 1.64,
               "installs": 22,
               "cpi": 0.13,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233531115460328",
@@ -4610,7 +4610,7 @@
               "frequency": 1.15,
               "installs": 4,
               "cpi": 0.62,
-              "format": "Other"
+              "format": "STATUS"
             }
           ]
         },
@@ -4632,7 +4632,7 @@
               "frequency": 8.39,
               "installs": 58,
               "cpi": 1.32,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745589160186",
@@ -4647,7 +4647,7 @@
               "frequency": 5.42,
               "installs": 136,
               "cpi": 0.5,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745473300186",
@@ -4662,7 +4662,7 @@
               "frequency": 4.83,
               "installs": 56,
               "cpi": 1.21,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744311770186",
@@ -4677,7 +4677,7 @@
               "frequency": 4.93,
               "installs": 58,
               "cpi": 0.64,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744743180186",
@@ -4692,7 +4692,7 @@
               "frequency": 4.47,
               "installs": 36,
               "cpi": 0.64,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745080030186",
@@ -4707,7 +4707,7 @@
               "frequency": 2.06,
               "installs": 30,
               "cpi": 0.51,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744573250186",
@@ -4722,7 +4722,7 @@
               "frequency": 2.25,
               "installs": 40,
               "cpi": 0.37,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745243740186",
@@ -4737,7 +4737,7 @@
               "frequency": 2.17,
               "installs": 26,
               "cpi": 0.57,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -4749,23 +4749,23 @@
             {
               "id": "120249931254330478",
               "name": "let-house-hcm",
-              "spend": 73.99,
-              "impressions": 91191,
+              "spend": 74.06,
+              "impressions": 91286,
               "reach": 62743,
-              "clicks": 1793,
+              "clicks": 1795,
               "ctr": 1.97,
               "cpc": 0.04,
               "cpm": 0.81,
               "frequency": 1.45,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120249931147860478",
               "name": "let-apartment-hcm",
-              "spend": 71.63,
-              "impressions": 95528,
+              "spend": 71.66,
+              "impressions": 95567,
               "reach": 59185,
               "clicks": 1338,
               "ctr": 1.4,
@@ -4774,13 +4774,13 @@
               "frequency": 1.61,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120249930993170478",
               "name": "let-room-hcm",
-              "spend": 70.53,
-              "impressions": 85382,
+              "spend": 70.54,
+              "impressions": 85422,
               "reach": 57582,
               "clicks": 1921,
               "ctr": 2.25,
@@ -4789,7 +4789,7 @@
               "frequency": 1.48,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -4801,203 +4801,203 @@
             {
               "id": "120235217656480308",
               "name": "catalog",
-              "spend": 148.49,
-              "impressions": 136996,
+              "spend": 148.53,
+              "impressions": 137049,
               "reach": 15896,
-              "clicks": 13069,
+              "clicks": 13076,
               "ctr": 9.54,
               "cpc": 0.01,
               "cpm": 1.08,
               "frequency": 8.62,
               "installs": 88,
               "cpi": 1.69,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120221688220100308",
               "name": "general",
-              "spend": 87.67,
-              "impressions": 62210,
+              "spend": 87.71,
+              "impressions": 62228,
               "reach": 8252,
               "clicks": 12882,
-              "ctr": 20.71,
+              "ctr": 20.7,
               "cpc": 0.01,
               "cpm": 1.41,
               "frequency": 7.54,
               "installs": 18,
               "cpi": 4.87,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356050308",
               "name": "GĐ2",
-              "spend": 82.73,
-              "impressions": 79045,
-              "reach": 21955,
-              "clicks": 8921,
+              "spend": 82.75,
+              "impressions": 79056,
+              "reach": 21974,
+              "clicks": 8922,
               "ctr": 11.29,
               "cpc": 0.01,
               "cpm": 1.05,
               "frequency": 3.6,
               "installs": 88,
               "cpi": 0.94,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566720308",
               "name": "SV1",
-              "spend": 79.14,
-              "impressions": 58393,
-              "reach": 13994,
-              "clicks": 6889,
+              "spend": 79.15,
+              "impressions": 58409,
+              "reach": 14008,
+              "clicks": 6890,
               "ctr": 11.8,
               "cpc": 0.01,
               "cpm": 1.36,
               "frequency": 4.17,
               "installs": 114,
               "cpi": 0.69,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217657110308",
               "name": "catalog",
-              "spend": 78.5,
-              "impressions": 67885,
-              "reach": 19009,
-              "clicks": 6619,
+              "spend": 78.53,
+              "impressions": 67908,
+              "reach": 19020,
+              "clicks": 6620,
               "ctr": 9.75,
               "cpc": 0.01,
               "cpm": 1.16,
               "frequency": 3.57,
               "installs": 138,
               "cpi": 0.57,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566810308",
               "name": "SV1",
-              "spend": 73.02,
-              "impressions": 82599,
+              "spend": 73.05,
+              "impressions": 82628,
               "reach": 32328,
-              "clicks": 5113,
+              "clicks": 5115,
               "ctr": 6.19,
               "cpc": 0.01,
               "cpm": 0.88,
               "frequency": 2.56,
               "installs": 116,
               "cpi": 0.63,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566800308",
               "name": "catalog",
-              "spend": 72.67,
-              "impressions": 85435,
+              "spend": 72.68,
+              "impressions": 85457,
               "reach": 31295,
               "clicks": 4886,
               "ctr": 5.72,
               "cpc": 0.01,
               "cpm": 0.85,
               "frequency": 2.73,
-              "installs": 124,
-              "cpi": 0.59,
-              "format": "Other"
+              "installs": 126,
+              "cpi": 0.58,
+              "format": "Dynamic"
             },
             {
               "id": "120235777182370308",
               "name": "SV1",
-              "spend": 71.31,
-              "impressions": 55565,
-              "reach": 12450,
-              "clicks": 4985,
+              "spend": 71.32,
+              "impressions": 55578,
+              "reach": 12465,
+              "clicks": 4986,
               "ctr": 8.97,
               "cpc": 0.01,
               "cpm": 1.28,
               "frequency": 4.46,
               "installs": 42,
               "cpi": 1.7,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182310308",
               "name": "catalog",
-              "spend": 63.79,
-              "impressions": 65721,
+              "spend": 63.83,
+              "impressions": 65737,
               "reach": 26191,
-              "clicks": 4064,
-              "ctr": 6.18,
+              "clicks": 4066,
+              "ctr": 6.19,
               "cpc": 0.02,
               "cpm": 0.97,
               "frequency": 2.51,
               "installs": 132,
               "cpi": 0.48,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356100308",
               "name": "general",
-              "spend": 58.52,
-              "impressions": 43780,
+              "spend": 58.56,
+              "impressions": 43791,
               "reach": 7149,
-              "clicks": 6957,
+              "clicks": 6959,
               "ctr": 15.89,
               "cpc": 0.01,
               "cpm": 1.34,
-              "frequency": 6.12,
+              "frequency": 6.13,
               "installs": 16,
               "cpi": 3.66,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566690308",
               "name": "catalog",
-              "spend": 53.79,
-              "impressions": 49339,
+              "spend": 53.82,
+              "impressions": 49361,
               "reach": 12729,
-              "clicks": 3990,
+              "clicks": 3992,
               "ctr": 8.09,
               "cpc": 0.01,
               "cpm": 1.09,
               "frequency": 3.88,
               "installs": 34,
               "cpi": 1.58,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227900223400308",
               "name": "GĐ2",
-              "spend": 47.9,
-              "impressions": 39591,
+              "spend": 47.95,
+              "impressions": 39611,
               "reach": 6808,
-              "clicks": 6104,
+              "clicks": 6109,
               "ctr": 15.42,
               "cpc": 0.01,
               "cpm": 1.21,
               "frequency": 5.82,
               "installs": 22,
               "cpi": 2.18,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227902712920308",
               "name": "GĐ2",
-              "spend": 36.0,
-              "impressions": 37668,
+              "spend": 36.01,
+              "impressions": 37678,
               "reach": 12659,
-              "clicks": 4945,
+              "clicks": 4948,
               "ctr": 13.13,
               "cpc": 0.01,
               "cpm": 0.96,
               "frequency": 2.98,
               "installs": 40,
               "cpi": 0.9,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217657130308",
               "name": "SV1",
-              "spend": 35.9,
-              "impressions": 30210,
+              "spend": 35.92,
+              "impressions": 30220,
               "reach": 10381,
               "clicks": 2952,
               "ctr": 9.77,
@@ -5006,13 +5006,13 @@
               "frequency": 2.91,
               "installs": 46,
               "cpi": 0.78,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235846343620308",
               "name": "GĐ1",
               "spend": 32.68,
-              "impressions": 32579,
+              "impressions": 32581,
               "reach": 12764,
               "clicks": 3217,
               "ctr": 9.87,
@@ -5021,73 +5021,73 @@
               "frequency": 2.55,
               "installs": 30,
               "cpi": 1.09,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217656490308",
               "name": "SV1",
-              "spend": 29.34,
-              "impressions": 21427,
+              "spend": 29.36,
+              "impressions": 21436,
               "reach": 6523,
-              "clicks": 2519,
+              "clicks": 2520,
               "ctr": 11.76,
               "cpc": 0.01,
               "cpm": 1.37,
-              "frequency": 3.28,
+              "frequency": 3.29,
               "installs": 8,
               "cpi": 3.67,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227899745440308",
               "name": "GĐ1",
               "spend": 26.0,
-              "impressions": 21133,
-              "reach": 5486,
-              "clicks": 3175,
-              "ctr": 15.02,
+              "impressions": 21138,
+              "reach": 5490,
+              "clicks": 3177,
+              "ctr": 15.03,
               "cpc": 0.01,
               "cpm": 1.23,
               "frequency": 3.85,
               "installs": 2,
               "cpi": 13.0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356120308",
               "name": "GĐ1",
-              "spend": 23.83,
-              "impressions": 23352,
+              "spend": 23.87,
+              "impressions": 23368,
               "reach": 11118,
-              "clicks": 2317,
-              "ctr": 9.92,
+              "clicks": 2321,
+              "ctr": 9.93,
               "cpc": 0.01,
               "cpm": 1.02,
               "frequency": 2.1,
               "installs": 16,
               "cpi": 1.49,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356090308",
               "name": "GĐ1",
-              "spend": 23.19,
-              "impressions": 12871,
+              "spend": 23.2,
+              "impressions": 12877,
               "reach": 3735,
               "clicks": 2772,
-              "ctr": 21.54,
+              "ctr": 21.53,
               "cpc": 0.01,
               "cpm": 1.8,
               "frequency": 3.45,
               "installs": 4,
               "cpi": 5.8,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182460308",
               "name": "catalog",
-              "spend": 19.34,
-              "impressions": 12389,
+              "spend": 19.35,
+              "impressions": 12396,
               "reach": 5889,
               "clicks": 1351,
               "ctr": 10.9,
@@ -5096,22 +5096,22 @@
               "frequency": 2.1,
               "installs": 24,
               "cpi": 0.81,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566700308",
               "name": "catalog",
               "spend": 14.49,
-              "impressions": 9818,
+              "impressions": 9824,
               "reach": 5141,
               "clicks": 1042,
               "ctr": 10.61,
               "cpc": 0.01,
-              "cpm": 1.48,
+              "cpm": 1.47,
               "frequency": 1.91,
               "installs": 24,
               "cpi": 0.6,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235846343650308",
@@ -5126,28 +5126,28 @@
               "frequency": 2.84,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217656470308",
               "name": "general_lowcost",
-              "spend": 11.5,
-              "impressions": 9972,
+              "spend": 11.51,
+              "impressions": 9984,
               "reach": 4688,
-              "clicks": 899,
-              "ctr": 9.02,
+              "clicks": 900,
+              "ctr": 9.01,
               "cpc": 0.01,
               "cpm": 1.15,
               "frequency": 2.13,
               "installs": 6,
               "cpi": 1.92,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356420308",
               "name": "catalog",
               "spend": 10.9,
-              "impressions": 10090,
+              "impressions": 10094,
               "reach": 6124,
               "clicks": 961,
               "ctr": 9.52,
@@ -5156,22 +5156,22 @@
               "frequency": 1.65,
               "installs": 4,
               "cpi": 2.73,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235846343630308",
               "name": "GĐ1",
-              "spend": 10.69,
-              "impressions": 7503,
+              "spend": 10.7,
+              "impressions": 7510,
               "reach": 3384,
-              "clicks": 1089,
-              "ctr": 14.51,
+              "clicks": 1093,
+              "ctr": 14.55,
               "cpc": 0.01,
               "cpm": 1.42,
               "frequency": 2.22,
               "installs": 2,
-              "cpi": 5.34,
-              "format": "Other"
+              "cpi": 5.35,
+              "format": "Dynamic"
             }
           ]
         }
@@ -5199,7 +5199,7 @@
               "frequency": 2.52,
               "installs": 638,
               "cpi": 0.62,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243445116360099",
@@ -5214,7 +5214,7 @@
               "frequency": 2.06,
               "installs": 448,
               "cpi": 0.61,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655090099",
@@ -5229,7 +5229,7 @@
               "frequency": 1.87,
               "installs": 544,
               "cpi": 0.38,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243442655010099",
@@ -5244,7 +5244,7 @@
               "frequency": 1.77,
               "installs": 160,
               "cpi": 0.7,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244320634150099",
@@ -5259,7 +5259,7 @@
               "frequency": 1.94,
               "installs": 86,
               "cpi": 0.88,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120242657656030099",
@@ -5274,7 +5274,7 @@
               "frequency": 2.12,
               "installs": 60,
               "cpi": 1.05,
-              "format": "Other"
+              "format": "Carousel"
             },
             {
               "id": "120239574826720099",
@@ -5289,7 +5289,7 @@
               "frequency": 2.88,
               "installs": 114,
               "cpi": 0.55,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120239574604650099",
@@ -5304,7 +5304,7 @@
               "frequency": 2.65,
               "installs": 192,
               "cpi": 0.31,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242884329380099",
@@ -5319,7 +5319,7 @@
               "frequency": 2.35,
               "installs": 80,
               "cpi": 0.7,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120242886272450099",
@@ -5334,7 +5334,7 @@
               "frequency": 2.71,
               "installs": 60,
               "cpi": 0.93,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120242885646120099",
@@ -5349,7 +5349,7 @@
               "frequency": 2.1,
               "installs": 60,
               "cpi": 0.92,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120239574944600099",
@@ -5364,7 +5364,7 @@
               "frequency": 1.24,
               "installs": 74,
               "cpi": 0.72,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120243443715230099",
@@ -5379,7 +5379,7 @@
               "frequency": 5.02,
               "installs": 10,
               "cpi": 4.85,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243444622780099",
@@ -5394,7 +5394,7 @@
               "frequency": 3.8,
               "installs": 16,
               "cpi": 3.01,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411440730099",
@@ -5409,7 +5409,7 @@
               "frequency": 3.85,
               "installs": 10,
               "cpi": 4.78,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244410119680099",
@@ -5424,7 +5424,7 @@
               "frequency": 3.13,
               "installs": 6,
               "cpi": 7.96,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411440670099",
@@ -5439,7 +5439,7 @@
               "frequency": 3.58,
               "installs": 6,
               "cpi": 7.92,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411017410099",
@@ -5454,7 +5454,7 @@
               "frequency": 4.11,
               "installs": 6,
               "cpi": 7.91,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411129470099",
@@ -5469,7 +5469,7 @@
               "frequency": 2.73,
               "installs": 10,
               "cpi": 4.74,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411440630099",
@@ -5484,7 +5484,7 @@
               "frequency": 3.56,
               "installs": 4,
               "cpi": 11.82,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244410861900099",
@@ -5499,7 +5499,7 @@
               "frequency": 3.1,
               "installs": 8,
               "cpi": 5.9,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411440750099",
@@ -5514,7 +5514,7 @@
               "frequency": 4.5,
               "installs": 10,
               "cpi": 4.72,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244410918070099",
@@ -5529,7 +5529,7 @@
               "frequency": 2.9,
               "installs": 8,
               "cpi": 5.89,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120244411440690099",
@@ -5544,7 +5544,7 @@
               "frequency": 3.78,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Video"
             },
             {
               "id": "120243829370600099",
@@ -5559,7 +5559,7 @@
               "frequency": 3.58,
               "installs": 18,
               "cpi": 2.49,
-              "format": "Other"
+              "format": "Video"
             }
           ]
         },
@@ -5581,7 +5581,7 @@
               "frequency": 11.55,
               "installs": 570,
               "cpi": 0.8,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120232817764320328",
@@ -5596,7 +5596,7 @@
               "frequency": 1.82,
               "installs": 398,
               "cpi": 0.64,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120233015084510328",
@@ -5611,7 +5611,7 @@
               "frequency": 1.26,
               "installs": 1276,
               "cpi": 0.14,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120226364772120328",
@@ -5626,7 +5626,7 @@
               "frequency": 4.5,
               "installs": 344,
               "cpi": 0.42,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120220896915150328",
@@ -5641,7 +5641,7 @@
               "frequency": 4.47,
               "installs": 558,
               "cpi": 0.25,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364040240328",
@@ -5656,7 +5656,7 @@
               "frequency": 4.61,
               "installs": 634,
               "cpi": 0.22,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233531405880328",
@@ -5671,7 +5671,7 @@
               "frequency": 1.95,
               "installs": 74,
               "cpi": 1.64,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120223173463840328",
@@ -5686,7 +5686,7 @@
               "frequency": 3.45,
               "installs": 878,
               "cpi": 0.12,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120240978775420328",
@@ -5701,7 +5701,7 @@
               "frequency": 2.7,
               "installs": 48,
               "cpi": 0.79,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233531115460328",
@@ -5716,7 +5716,7 @@
               "frequency": 1.3,
               "installs": 26,
               "cpi": 1.43,
-              "format": "Other"
+              "format": "STATUS"
             },
             {
               "id": "120240978910050328",
@@ -5731,7 +5731,7 @@
               "frequency": 2.56,
               "installs": 32,
               "cpi": 1.04,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226830255230328",
@@ -5746,7 +5746,7 @@
               "frequency": 2.4,
               "installs": 94,
               "cpi": 0.3,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364600000328",
@@ -5761,7 +5761,7 @@
               "frequency": 2.23,
               "installs": 26,
               "cpi": 0.94,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364759040328",
@@ -5776,7 +5776,7 @@
               "frequency": 1.9,
               "installs": 56,
               "cpi": 0.43,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364736780328",
@@ -5791,7 +5791,7 @@
               "frequency": 1.81,
               "installs": 52,
               "cpi": 0.44,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364560200328",
@@ -5806,7 +5806,7 @@
               "frequency": 1.74,
               "installs": 28,
               "cpi": 0.56,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120240979010470328",
@@ -5821,7 +5821,7 @@
               "frequency": 1.78,
               "installs": 20,
               "cpi": 0.66,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120223174209700328",
@@ -5836,7 +5836,7 @@
               "frequency": 2.08,
               "installs": 62,
               "cpi": 0.19,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120233016018770328",
@@ -5851,7 +5851,7 @@
               "frequency": 1.26,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Image"
             },
             {
               "id": "120226363989290328",
@@ -5866,7 +5866,7 @@
               "frequency": 2.0,
               "installs": 46,
               "cpi": 0.23,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226363940780328",
@@ -5881,7 +5881,7 @@
               "frequency": 1.88,
               "installs": 40,
               "cpi": 0.23,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364180420328",
@@ -5896,7 +5896,7 @@
               "frequency": 1.72,
               "installs": 50,
               "cpi": 0.16,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226830362470328",
@@ -5911,7 +5911,7 @@
               "frequency": 1.76,
               "installs": 64,
               "cpi": 0.12,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364222810328",
@@ -5926,7 +5926,7 @@
               "frequency": 1.38,
               "installs": 46,
               "cpi": 0.08,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120226364128630328",
@@ -5941,7 +5941,7 @@
               "frequency": 1.38,
               "installs": 14,
               "cpi": 0.2,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -5963,7 +5963,7 @@
               "frequency": 19.3,
               "installs": 256,
               "cpi": 1.69,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744311770186",
@@ -5978,7 +5978,7 @@
               "frequency": 8.47,
               "installs": 392,
               "cpi": 0.97,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745473300186",
@@ -5993,7 +5993,7 @@
               "frequency": 8.11,
               "installs": 248,
               "cpi": 1.37,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745589160186",
@@ -6008,7 +6008,7 @@
               "frequency": 6.73,
               "installs": 284,
               "cpi": 0.66,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744743180186",
@@ -6023,7 +6023,7 @@
               "frequency": 8.34,
               "installs": 152,
               "cpi": 0.95,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745243740186",
@@ -6038,7 +6038,7 @@
               "frequency": 4.23,
               "installs": 132,
               "cpi": 0.7,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242745080030186",
@@ -6053,7 +6053,7 @@
               "frequency": 3.87,
               "installs": 244,
               "cpi": 0.38,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120242744573250186",
@@ -6068,7 +6068,7 @@
               "frequency": 4.78,
               "installs": 194,
               "cpi": 0.47,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -6090,7 +6090,7 @@
               "frequency": 6.72,
               "installs": 62,
               "cpi": 1.46,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120247220516440478",
@@ -6105,7 +6105,7 @@
               "frequency": 1.74,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120244894296600478",
@@ -6120,7 +6120,7 @@
               "frequency": 5.75,
               "installs": 52,
               "cpi": 1.52,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120248177609810478",
@@ -6135,7 +6135,7 @@
               "frequency": 0.0,
               "installs": 0,
               "cpi": 0,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         },
@@ -6157,7 +6157,7 @@
               "frequency": 5.52,
               "installs": 888,
               "cpi": 0.55,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217656480308",
@@ -6172,7 +6172,7 @@
               "frequency": 12.9,
               "installs": 274,
               "cpi": 1.78,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227900223400308",
@@ -6187,7 +6187,7 @@
               "frequency": 18.09,
               "installs": 78,
               "cpi": 4.11,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356050308",
@@ -6202,7 +6202,7 @@
               "frequency": 6.22,
               "installs": 286,
               "cpi": 1.04,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356100308",
@@ -6217,7 +6217,7 @@
               "frequency": 12.85,
               "installs": 66,
               "cpi": 3.81,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182370308",
@@ -6232,7 +6232,7 @@
               "frequency": 5.75,
               "installs": 114,
               "cpi": 1.87,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217657110308",
@@ -6247,7 +6247,7 @@
               "frequency": 4.6,
               "installs": 352,
               "cpi": 0.59,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182310308",
@@ -6262,7 +6262,7 @@
               "frequency": 3.56,
               "installs": 342,
               "cpi": 0.58,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227902712920308",
@@ -6277,7 +6277,7 @@
               "frequency": 5.25,
               "installs": 128,
               "cpi": 1.25,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566720308",
@@ -6292,7 +6292,7 @@
               "frequency": 4.92,
               "installs": 158,
               "cpi": 0.94,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566690308",
@@ -6307,7 +6307,7 @@
               "frequency": 5.14,
               "installs": 44,
               "cpi": 2.7,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235846343630308",
@@ -6322,7 +6322,7 @@
               "frequency": 7.64,
               "installs": 32,
               "cpi": 3.55,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235846343620308",
@@ -6337,7 +6337,7 @@
               "frequency": 3.46,
               "installs": 102,
               "cpi": 0.99,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566800308",
@@ -6352,7 +6352,7 @@
               "frequency": 2.63,
               "installs": 192,
               "cpi": 0.53,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235214543190308",
@@ -6367,7 +6367,7 @@
               "frequency": 2.91,
               "installs": 154,
               "cpi": 0.65,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120221688220100308",
@@ -6382,7 +6382,7 @@
               "frequency": 5.89,
               "installs": 26,
               "cpi": 2.59,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566700308",
@@ -6397,7 +6397,7 @@
               "frequency": 2.98,
               "installs": 96,
               "cpi": 0.69,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182460308",
@@ -6412,7 +6412,7 @@
               "frequency": 2.74,
               "installs": 50,
               "cpi": 1.2,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235777182380308",
@@ -6427,7 +6427,7 @@
               "frequency": 1.99,
               "installs": 60,
               "cpi": 0.85,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566650308",
@@ -6442,7 +6442,7 @@
               "frequency": 2.69,
               "installs": 14,
               "cpi": 2.57,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235775566670308",
@@ -6457,7 +6457,7 @@
               "frequency": 2.61,
               "installs": 16,
               "cpi": 2.13,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217656470308",
@@ -6472,7 +6472,7 @@
               "frequency": 2.73,
               "installs": 8,
               "cpi": 3.94,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120227899745440308",
@@ -6487,7 +6487,7 @@
               "frequency": 3.77,
               "installs": 4,
               "cpi": 7.88,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235217657130308",
@@ -6502,7 +6502,7 @@
               "frequency": 2.24,
               "installs": 22,
               "cpi": 1.19,
-              "format": "Other"
+              "format": "Dynamic"
             },
             {
               "id": "120235845356090308",
@@ -6517,7 +6517,7 @@
               "frequency": 3.23,
               "installs": 4,
               "cpi": 6.53,
-              "format": "Other"
+              "format": "Dynamic"
             }
           ]
         }

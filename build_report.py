@@ -130,13 +130,16 @@ def classify_format(creative):
     """Map a creative object to a coarse format bucket used by the dashboard."""
     if not creative:
         return "Other"
-    if creative.get("video_id") or creative.get("object_type") == "VIDEO":
+    oss = creative.get("object_story_spec") or {}
+    link = oss.get("link_data") or {}
+    if creative.get("video_id") or creative.get("object_type") == "VIDEO" or oss.get("video_data"):
         return "Video"
-    if creative.get("child_attachments"):
+    # carousel cards live under object_story_spec.link_data.child_attachments
+    if link.get("child_attachments"):
         return "Carousel"
-    if creative.get("image_hash") or creative.get("object_type") == "PHOTO":
+    if creative.get("image_hash") or creative.get("object_type") == "PHOTO" or link.get("image_hash"):
         return "Image"
-    # object_story_spec-based dynamic/catalog ads report as SHARE with no asset
+    # object_story_spec/asset_feed-based dynamic/catalog ads report as SHARE, no asset
     if creative.get("object_type") == "SHARE":
         return "Dynamic"
     return creative.get("object_type") or "Other"
@@ -150,7 +153,7 @@ def fetch_formats(ad_ids):
         batch = ids[i:i + 50]
         params = {
             "ids": ",".join(batch),
-            "fields": "creative{object_type,video_id,image_hash,child_attachments}",
+            "fields": "creative{object_type,video_id,image_hash,object_story_spec}",
             "access_token": TOKEN,
         }
         data = _get(META_GRAPH_URL, params)

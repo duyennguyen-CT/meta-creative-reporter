@@ -41,7 +41,16 @@ GROUPS = {
     "Chotot_veh_sgd":     "VERTICAL",
 }
 
-DATE_PRESET = "last_30d"
+# Time ranges pre-built into the dashboard (dropdown). key = Meta date_preset.
+PRESETS = [
+    ("yesterday",  "Hôm qua"),
+    ("last_7d",    "7 ngày qua"),
+    ("last_30d",   "30 ngày qua"),
+    ("this_month", "Tháng này"),
+    ("last_month", "Tháng trước"),
+]
+DEFAULT_RANGE = "last_30d"
+
 FIELDS = "ad_id,ad_name,spend,impressions,reach,clicks,ctr,cpc,cpm,frequency,actions"
 TOP_N = 25  # creatives per account, sorted by spend
 
@@ -76,13 +85,13 @@ def _get(url, params, retries=3):
     return {}
 
 
-def fetch_creatives(account_id):
-    """Return a list of ad/creative rows for one account, sorted by spend."""
+def fetch_creatives(account_id, date_preset):
+    """Return a list of ad/creative rows for one account + time range, by spend."""
     url = f"{META_GRAPH_URL}/act_{account_id}/insights"
     params = {
         "level": "ad",
         "fields": FIELDS,
-        "date_preset": DATE_PRESET,
+        "date_preset": date_preset,
         "filtering": json.dumps([{"field": "spend", "operator": "GREATER_THAN", "value": "0"}]),
         "sort": "spend_descending",
         "limit": TOP_N,
@@ -117,28 +126,51 @@ def fetch_creatives(account_id):
     return rows
 
 
-def build_from_api():
-    accounts = []
-    for label, acc_id in ACCOUNTS.items():
-        print(f"Pulling {label} ({acc_id}) ...")
-        creatives = fetch_creatives(acc_id)
-        print(f"  -> {len(creatives)} creatives")
-        accounts.append({
-            "id": acc_id,
-            "label": label,
-            "group": GROUPS.get(label, ""),
-            "creatives": creatives,
-        })
+def period_label(preset):
+    """Human date range that approximates Meta's definition of the preset."""
+    t = datetime.date.today()
+    y = t - datetime.timedelta(days=1)
+    if preset == "yesterday":
+        s = e = y
+    elif preset == "last_7d":
+        e, s = y, t - datetime.timedelta(days=7)
+    elif preset == "last_30d":
+        e, s = y, t - datetime.timedelta(days=30)
+    elif preset == "this_month":
+        s, e = t.replace(day=1), t
+    elif preset == "last_month":
+        e = t.replace(day=1) - datetime.timedelta(days=1)
+        s = e.replace(day=1)
+    else:
+        s = e = t
+    return f"{s:%-d %b} – {e:%-d %b %Y}"
 
-    today = datetime.date.today()
-    start = today - datetime.timedelta(days=30)
+
+def build_from_api():
+    ranges = {}
+    for preset, label in PRESETS:
+        accounts = []
+        for acc_label, acc_id in ACCOUNTS.items():
+            print(f"Pulling [{preset}] {acc_label} ({acc_id}) ...")
+            creatives = fetch_creatives(acc_id, preset)
+            print(f"  -> {len(creatives)} creatives")
+            accounts.append({
+                "id": acc_id,
+                "label": acc_label,
+                "group": GROUPS.get(acc_label, ""),
+                "creatives": creatives,
+            })
+        ranges[preset] = {
+            "label": label,
+            "period_label": period_label(preset),
+            "accounts": accounts,
+        }
+
     return {
         "generated_at": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "period_label": f"{start:%-d %b} – {today:%-d %b %Y} (last 30 days)",
-        "date_start": start.isoformat(),
-        "date_stop": today.isoformat(),
         "currency": "SGD",
-        "accounts": accounts,
+        "default_range": DEFAULT_RANGE,
+        "ranges": ranges,
     }
 
 
@@ -152,8 +184,10 @@ def main():
     report = build_from_api()
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2))
-    total = sum(c["spend"] for a in report["accounts"] for c in a["creatives"])
-    print(f"Wrote {OUT_PATH} — total spend SGD {total:,.2f}")
+    dflt = report["ranges"].get(DEFAULT_RANGE) or next(iter(report["ranges"].values()))
+    total = sum(c["spend"] for a in dflt["accounts"] for c in a["creatives"])
+    print(f"Wrote {OUT_PATH} — {len(report['ranges'])} ranges, "
+          f"{DEFAULT_RANGE} total spend SGD {total:,.2f}")
 
 
 if __name__ == "__main__":

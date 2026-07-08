@@ -19,6 +19,7 @@
   header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
   h1 { font-size: 20px; margin: 0; }
   .sub { color: var(--muted); font-size: 13px; }
+  .range-select { font-size: 13px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink); cursor: pointer; margin-bottom: 6px; }
   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin: 22px 0; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
   .card .k { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
@@ -62,7 +63,10 @@
       <h1>📊 Chotot Meta Ads — Creative Performance</h1>
       <div class="sub" id="period">…</div>
     </div>
-    <div class="sub" id="generated">…</div>
+    <div style="text-align:right">
+      <select id="range" class="range-select"></select>
+      <div class="sub" id="generated">…</div>
+    </div>
   </header>
 
   <div class="cards" id="cards"></div>
@@ -79,6 +83,7 @@
 
 <script>
 const CUR = "SGD";
+let RAW = null, RANGES = {}, curRange = null;
 let DATA = null, activeIdx = 0, sortKey = "spend", sortDir = -1, grouped = true;
 
 const fmtInt = n => n.toLocaleString("en-US");
@@ -207,16 +212,32 @@ function renderPanel() {
     </div>`;
 }
 
+function applyRange(key) {
+  curRange = key;
+  DATA = {accounts: RANGES[key].accounts};
+  activeIdx = Math.min(Math.max(activeIdx, 0), DATA.accounts.length - 1);
+  document.getElementById("period").textContent = RANGES[key].period_label || "";
+  renderCards(); renderTabs(); renderControls(); renderPanel();
+}
+
 fetch("./data/latest.json?v=" + Date.now())
   .then(r => r.json())
   .then(d => {
-    DATA = d;
-    document.getElementById("period").textContent = d.period_label || "";
+    RAW = d;
+    // New schema has `ranges`; fall back to old flat schema for safety.
+    RANGES = d.ranges || {all: {label: "", period_label: d.period_label, accounts: d.accounts}};
+    const keys = Object.keys(RANGES);
+    const sel = document.getElementById("range");
+    sel.innerHTML = keys.map(k => `<option value="${k}">${RANGES[k].label || k}</option>`).join("");
+    curRange = (d.default_range && RANGES[d.default_range]) ? d.default_range : keys[0];
+    sel.value = curRange;
+    sel.onchange = () => applyRange(sel.value);
+
     document.getElementById("generated").textContent = "Cập nhật: " + (d.generated_at || "").replace("T", " ").replace("Z", " UTC");
     document.getElementById("foot").textContent = "Freq badge:  <3× (ok) · 3–7× (theo dõi) · ≥7× (cao)  ·  Gom theo creative: reach là tổng (ước lượng)  —  data từ Meta Marketing API";
     document.getElementById("btn-grouped").onclick = () => setView(true);
     document.getElementById("btn-perad").onclick = () => setView(false);
-    renderCards(); renderTabs(); renderControls(); renderPanel();
+    applyRange(curRange);
   })
   .catch(e => { document.getElementById("panel").innerHTML = `<div class="err">Không load được data/latest.json<br>${e}</div>`; });
 </script>

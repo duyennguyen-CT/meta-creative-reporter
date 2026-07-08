@@ -83,11 +83,13 @@
 
 <script>
 const CUR = "SGD";
+const SGD_TO_VND = 20337;  // exchange rate used for the VND columns
 let RAW = null, RANGES = {}, curRange = null;
 let DATA = null, activeIdx = 0, sortKey = "spend", sortDir = -1, grouped = true;
 
 const fmtInt = n => n.toLocaleString("en-US");
 const fmtMoney = n => CUR + " " + n.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+const fmtVnd = n => "₫" + Math.round(n).toLocaleString("en-US");
 const fmtPct = n => n.toFixed(2) + "%";
 const fmtDash = f => n => (n > 0 && isFinite(n)) ? f(n) : "–";  // show "–" instead of 0
 
@@ -113,20 +115,26 @@ function aggregateByName(creatives) {
     g.clicks += c.clicks; g.installs += (c.installs || 0);
     map.set(c.name, g);
   });
-  return [...map.values()].map(g => ({
-    ...g,
-    ctr: g.impressions ? g.clicks / g.impressions * 100 : 0,
-    cpc: g.clicks ? g.spend / g.clicks : 0,
-    cpm: g.impressions ? g.spend / g.impressions * 1000 : 0,
-    frequency: g.reach ? g.impressions / g.reach : 0,
-    cpi: g.installs ? g.spend / g.installs : 0,
-  }));
+  return [...map.values()].map(g => {
+    const cpi = g.installs ? g.spend / g.installs : 0;
+    return {
+      ...g,
+      ctr: g.impressions ? g.clicks / g.impressions * 100 : 0,
+      cpc: g.clicks ? g.spend / g.clicks : 0,
+      cpm: g.impressions ? g.spend / g.impressions * 1000 : 0,
+      frequency: g.reach ? g.impressions / g.reach : 0,
+      cpi,
+      spend_vnd: g.spend * SGD_TO_VND,
+      cpi_vnd: cpi * SGD_TO_VND,
+    };
+  });
 }
 
 // Per-ad row: guarantee installs/cpi exist even for older data files.
 function normalize(c) {
   const installs = c.installs || 0;
-  return {...c, ads: 1, installs, cpi: c.cpi != null ? c.cpi : (installs ? c.spend / installs : 0)};
+  const cpi = c.cpi != null ? c.cpi : (installs ? c.spend / installs : 0);
+  return {...c, ads: 1, installs, cpi, spend_vnd: c.spend * SGD_TO_VND, cpi_vnd: cpi * SGD_TO_VND};
 }
 
 function renderCards() {
@@ -161,6 +169,7 @@ function setView(g) { grouped = g; sortKey = "spend"; sortDir = -1; renderContro
 const COLS = [
   {k: "name", label: "Creative"},
   {k: "spend", label: "Spend", f: fmtMoney},
+  {k: "spend_vnd", label: "Spend (₫)", f: fmtVnd},
   {k: "impressions", label: "Impr.", f: fmtInt},
   {k: "reach", label: "Reach", f: fmtInt},
   {k: "clicks", label: "Clicks", f: fmtInt},
@@ -169,6 +178,7 @@ const COLS = [
   {k: "cpm", label: "CPM", f: fmtMoney},
   {k: "installs", label: "Installs", f: fmtDash(fmtInt)},
   {k: "cpi", label: "CPI", f: fmtDash(fmtMoney)},
+  {k: "cpi_vnd", label: "CPI (₫)", f: fmtDash(fmtVnd)},
   {k: "frequency", label: "Freq", f: freqBadge},
 ];
 
@@ -234,7 +244,7 @@ fetch("./data/latest.json?v=" + Date.now())
     sel.onchange = () => applyRange(sel.value);
 
     document.getElementById("generated").textContent = "Updated: " + (d.generated_at || "").replace("T", " ").replace("Z", " UTC");
-    document.getElementById("foot").textContent = "Freq badge:  <3× (ok) · 3–7× (watch) · ≥7× (high)  ·  Group by creative: reach is summed (estimate)  —  data from Meta Marketing API";
+    document.getElementById("foot").textContent = "Freq badge:  <3× (ok) · 3–7× (watch) · ≥7× (high)  ·  Group by creative: reach is summed (estimate)  ·  VND @ 1 SGD = " + SGD_TO_VND.toLocaleString("en-US") + "  —  data from Meta Marketing API";
     document.getElementById("btn-grouped").onclick = () => setView(true);
     document.getElementById("btn-perad").onclick = () => setView(false);
     applyRange(curRange);

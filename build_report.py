@@ -45,6 +45,7 @@ GROUPS = {
 PRESETS = [
     ("yesterday",  "Yesterday"),
     ("last_7d",    "Last 7 days"),
+    ("last_14d",   "Last 2 weeks"),
     ("last_30d",   "Last 30 days"),
     ("this_month", "This month"),
     ("last_month", "Last month"),
@@ -178,6 +179,8 @@ def period_label(preset):
         s = e = y
     elif preset == "last_7d":
         e, s = y, t - datetime.timedelta(days=7)
+    elif preset == "last_14d":
+        e, s = y, t - datetime.timedelta(days=14)
     elif preset == "last_30d":
         e, s = y, t - datetime.timedelta(days=30)
     elif preset == "this_month":
@@ -199,6 +202,8 @@ def previous_range(preset):
         return d, d
     if preset == "last_7d":
         return t - datetime.timedelta(days=14), t - datetime.timedelta(days=8)
+    if preset == "last_14d":
+        return t - datetime.timedelta(days=28), t - datetime.timedelta(days=15)
     if preset == "last_30d":
         return t - datetime.timedelta(days=60), t - datetime.timedelta(days=31)
     if preset == "this_month":
